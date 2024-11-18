@@ -1541,7 +1541,7 @@
 // #include<iostream>
 // using namespace std;
 
-// int addition(int x, int y);
+// int addition(int x, int y);  // function declaration
 
 // int main(){
 
@@ -1552,7 +1552,7 @@
 // }
 
 
-// int addition(int x, int y){   // parameter
+// int addition(int x, int y){   // function definition
 
 //     int result = x+y;
 
@@ -1595,3 +1595,73 @@
 // return 0;
 
 // }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int  a = 10;
+
+//     int *ptr = &a;
+
+
+//     cout<<" a = "<<a<<endl;
+//     cout<<" *ptr = "<<*ptr<<endl;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int  a = 10;
+
+//     int *ptr = &a;
+
+// // Both value will be same
+
+//     cout<<" a = "<<a<<endl;
+//     cout<<" *ptr = "<<*ptr<<endl;
+
+// // Both variable address will be same 
+
+// cout<<" Address of a : "<<&a<<endl;
+// cout<<" Address of ptr : "<<ptr<<endl;
+// }
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int  a = 10;
+
+    int *ptr = &a;
+
+// Both value will be same
+
+    cout<<" a = "<<a<<endl;
+    cout<<" *ptr = "<<*ptr<<endl;
+
+// Both variable address will be same 
+
+cout<<" Address of a : "<<&a<<endl;
+cout<<" Address of ptr : "<<ptr<<endl;
+
+
+*ptr = 100;
+
+cout<<"Updated Value : "<<endl;
+
+// Both value will be same
+
+    cout<<" a = "<<a<<endl;
+    cout<<" *ptr = "<<*ptr<<endl;
+
+// Both variable address will be same 
+
+cout<<" Address of a : "<<&a<<endl;
+cout<<" Address of ptr : "<<ptr<<endl;
+}
