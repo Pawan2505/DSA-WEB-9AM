@@ -1632,36 +1632,362 @@
 // }
 
 
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int  a = 10;
+
+//     int *ptr = &a;
+
+// // Both value will be same
+
+//     cout<<" a = "<<a<<endl;
+//     cout<<" *ptr = "<<*ptr<<endl;
+
+// // Both variable address will be same 
+
+// cout<<" Address of a : "<<&a<<endl;
+// cout<<" Address of ptr : "<<ptr<<endl;
+
+
+// *ptr = 100;
+
+// cout<<"Updated Value : "<<endl;
+
+// // Both value will be same
+
+//     cout<<" a = "<<a<<endl;
+//     cout<<" *ptr = "<<*ptr<<endl;
+
+// // Both variable address will be same 
+
+// cout<<" Address of a : "<<&a<<endl;
+// cout<<" Address of ptr : "<<ptr<<endl;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int display(int value){
+
+//     value *= 5;
+
+//     cout<<value<<endl;
+
+// }
+
+// int main(){
+//     int num = 10;
+
+//     display(num);
+
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int display(int &value){
+
+//     value *= 5;
+    
+//     cout<<&value<<endl;
+//     cout<<value<<endl;
+
+// }
+
+// int main(){
+//     int num = 10;
+
+//     display(num);
+//     cout<<&num<<endl;
+//     cout<<num<<endl;
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int display(int *value){
+
+//     *value *= 5;
+    
+  
+//     cout<<*value<<endl;
+
+// }
+
+// int main(){
+//     int num = 10;
+
+//     display(&num);
+ 
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int display(int brr[], int s){
+
+//   for(int i = 0; i < s; i++){
+//     cout<<brr[i]<<" ";
+//   }
+
+// }
+
+// int main(){
+// int n = 6;
+// int arr[n] = {12,43,56,76,87,3};
+
+// display(arr, n);
+ 
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Employee{
+
+// }
+
+// int main(){
+
+//   Employee emp;
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Employee{
+// public :
+
+//   void displayDetails(){
+//      cout<<"Hello Class";
+//   }
+
+
+// };
+
+// int main(){
+
+//   // Employee emp;
+//   // emp.displayDetails();  // Ok
+
+//   displayDetails();   // Not Ok
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Employee{
+// public :
+
+//   string name;
+//   int age;
+
+// public :
+
+//   void displayDetails(){
+//      cout<<"Name : "<<name<<endl;
+//      cout<<"Age : "<<age<<endl;
+//   }
+
+
+// };
+
+// int main(){
+
+
+//   Employee emp;  // create object -> memory allocated to data member
+  
+//   emp.name = "Pawan";
+//   emp.age = 24;
+
+//   emp.displayDetails();
+
+
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Employee{
+// private :
+
+//   string name;
+//   int age;
+
+
+
+//   void displayDetails(){
+//      cout<<"Name : "<<name<<endl;
+//      cout<<"Age : "<<age<<endl;
+//   }
+
+
+// };
+
+// int main(){
+
+
+//   Employee emp;  // create object -> memory allocated to data member
+  
+//   emp.name = "Pawan";
+//   emp.age = 24;
+
+//   emp.displayDetails();
+
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Employee{
+// private :
+
+//   string name;
+//   int age;
+
+//   public :
+
+// Employee(){
+//   cout<<"Constructor called...";
+// }
+
+//   void displayDetails(){
+//      cout<<"Name : "<<name<<endl;
+//      cout<<"Age : "<<age<<endl;
+//   }
+
+
+// };
+
+// int main(){
+
+
+//   Employee emp;  // create object -> memory allocated to data member
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Employee{
+// private :
+
+//   string name;
+//   int age;
+//   int salary;
+
+//   public :
+
+// Employee(){
+
+//   this->name = "Sejal";
+//   this->age = 16;
+//   this->salary = 2000000;
+ 
+// }
+
+// Employee(string name, int age){
+
+//   this->name = name;
+//   this->age = age;
+ 
+// }
+
+// Employee(string name, int age, int salary){
+
+//   this->name = name;
+//   this->age = age;
+//   this->salary = salary;
+ 
+// }
+
+//   void displayDetails(){
+//      cout<<"Name : "<<name<<endl;
+//      cout<<"Age : "<<age<<endl;
+//      cout<<"Salary : "<<salary<<endl;
+//   }
+
+
+// };
+
+// int main(){
+
+//   Employee em;
+//   em.displayDetails();
+//   Employee emp("Pawan",24);  // create object -> memory allocated to data member
+//   // create object -> memory allocated to data member
+
+
+//   emp.displayDetails();
+  
+
+// }
+
+
+
 #include<iostream>
 using namespace std;
 
+class Student{
+
+  // Data Member / Properties
+  public :
+
+    string name;
+    int rollno;
+    int marks;
+
+
+
+    Student(){
+     name = "";
+     rollno = 0;
+     marks = 0;
+    }
+
+    Student(string nam, int roll, int mark){
+      name = nam;
+      rollno = roll;
+      marks = mark;
+    }
+
+    void display(){
+    cout<<"Name : "<<name<<endl;
+    cout<<"Roll No : "<<rollno<<endl;
+    cout<<"Marks : "<<marks<<endl;
+    }
+
+};
+
 int main(){
-    int  a = 10;
 
-    int *ptr = &a;
+  Student s1;
+  Student s2("Pawan",123,12345);
 
-// Both value will be same
+  s1.display();
+  s2.display();
 
-    cout<<" a = "<<a<<endl;
-    cout<<" *ptr = "<<*ptr<<endl;
-
-// Both variable address will be same 
-
-cout<<" Address of a : "<<&a<<endl;
-cout<<" Address of ptr : "<<ptr<<endl;
-
-
-*ptr = 100;
-
-cout<<"Updated Value : "<<endl;
-
-// Both value will be same
-
-    cout<<" a = "<<a<<endl;
-    cout<<" *ptr = "<<*ptr<<endl;
-
-// Both variable address will be same 
-
-cout<<" Address of a : "<<&a<<endl;
-cout<<" Address of ptr : "<<ptr<<endl;
 }
