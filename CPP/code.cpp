@@ -1948,46 +1948,215 @@
 
 
 
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+//   // Data Member / Properties
+//   public :
+
+//     string name;
+//     int rollno;
+//     int marks;
+
+
+
+//     Student(){
+//      name = "";
+//      rollno = 0;
+//      marks = 0;
+//     }
+
+//     Student(string nam, int roll, int mark){
+//       name = nam;
+//       rollno = roll;
+//       marks = mark;
+//     }
+
+//     void display(){
+//     cout<<"Name : "<<name<<endl;
+//     cout<<"Roll No : "<<rollno<<endl;
+//     cout<<"Marks : "<<marks<<endl;
+//     }
+
+// };
+
+// int main(){
+
+//   Student s1;
+//   Student s2("Pawan",123,12345);
+
+//   s1.display();
+//   s2.display();
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+//   // Data Member / Properties
+//   public :
+
+//     string name;
+//     int rollno;
+//     int marks;
+
+
+
+//     Student(){
+//      name = "";
+//      rollno = 0;
+//      marks = 0;
+//     }
+
+//     Student(string name, int rollno, int marks){
+//       this->name = name;
+//       this->rollno = rollno;
+//       this->marks = marks;
+//     }
+
+//     void display(){
+//     cout<<"Name : "<<name<<endl;
+//     cout<<"Roll No : "<<rollno<<endl;
+//     cout<<"Marks : "<<marks<<endl;
+//     }
+
+// };
+
+// int main(){
+
+//   Student s1;
+//   Student s2("Pawan",123,12345);
+
+//   s1.display();
+//   s2.display();
+
+// cout<<"Class Size : "<<sizeof(Student)<<endl;
+// cout<<"String Size : "<<sizeof(string)<<endl;
+
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+//   // Data Member / Properties
+//   private :
+
+//     string name;
+//     int rollno;
+//     int marks;
+
+
+//   public :
+
+//   void setValue(string name, int rollno, int marks ){
+//     this->name = name;
+//     this->rollno = rollno;
+//     this->marks = marks;
+//   }
+
+//   void getdisplay(){
+//     cout<<"Name : "<<name<<endl;
+//     cout<<"Roll No : "<<rollno<<endl;
+//     cout<<"Marks : "<<marks<<endl;
+//     }
+
+// };
+
+// int main(){
+
+//   Student s1;
+//   s1.setValue("Pawan",123,1234);
+
+//   s1.getdisplay();
+
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+//   // Data Member / Properties
+//   private :
+
+//     string name;
+//     int rollno;
+//     int marks;
+
+
+//   public :
+
+//   void setValue(string name, int rollno, int marks ){
+//     this->name = name;
+//     this->rollno = rollno;
+//     this->marks = marks;
+//   }
+
+//   void getdisplay(){
+//     cout<<"Name : "<<name<<endl;
+//     cout<<"Roll No : "<<rollno<<endl;
+//     cout<<"Marks : "<<marks<<endl;
+//     }
+
+//   int getMarks(){
+//     return marks;
+//   }
+
+
+// };
+
+// int main(){
+
+//   Student s1;
+//   s1.setValue("Pawan",123,1234);
+
+//   s1.getdisplay();
+
+// cout<<"Marks : "<<s1.getMarks();
+
+// }
+
+
+
+
 #include<iostream>
 using namespace std;
 
 class Student{
 
-  // Data Member / Properties
-  public :
+public :
 
-    string name;
-    int rollno;
-    int marks;
+ Student(){
+  cout<<"Constructor called..."<<endl;
+ }
 
+~Student(){
 
+cout<<"Destructor called.."<<endl;
 
-    Student(){
-     name = "";
-     rollno = 0;
-     marks = 0;
-    }
-
-    Student(string nam, int roll, int mark){
-      name = nam;
-      rollno = roll;
-      marks = mark;
-    }
-
-    void display(){
-    cout<<"Name : "<<name<<endl;
-    cout<<"Roll No : "<<rollno<<endl;
-    cout<<"Marks : "<<marks<<endl;
-    }
+}
 
 };
 
 int main(){
-
   Student s1;
-  Student s2("Pawan",123,12345);
-
-  s1.display();
-  s2.display();
-
 }
+
+
+
+
+
