@@ -2133,30 +2133,77 @@
 
 
 
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+// public :
+
+//  Student(){
+//   cout<<"Constructor called..."<<endl;
+//  }
+
+// ~Student(){
+
+// cout<<"Destructor called.."<<endl;
+
+// }
+
+// };
+
+// int main(){
+//   Student s1;
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//   public :
+//   static int age;
+
+//   static int display(){
+//     cout<<"Age : "<<age<<endl;
+//   }
+
+// };
+
+// int Student::age = 24;
+
+// int main(){
+
+// Student::display();
+
+// }
+
+
+
+
 #include<iostream>
 using namespace std;
 
 class Student{
-
-public :
-
- Student(){
-  cout<<"Constructor called..."<<endl;
- }
-
-~Student(){
-
-cout<<"Destructor called.."<<endl;
-
-}
+  // public :
+  // static int age;
+  // static int marks;
+  // static int display(){
+  //   cout<<"Age : "<<age<<endl;
+  // }
 
 };
 
+// int Student::age = 24;
+// int Student::marks = 123;
+
 int main(){
-  Student s1;
+
+// Student::display();
+
+cout<<"Size of class : "<<sizeof(Student)<<endl;
+
 }
-
-
-
-
 
