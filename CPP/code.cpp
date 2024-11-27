@@ -2183,27 +2183,218 @@
 
 
 
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//   // public :
+//   // static int age;
+//   // static int marks;
+//   // static int display(){
+//   //   cout<<"Age : "<<age<<endl;
+//   // }
+
+// };
+
+// // int Student::age = 24;
+// // int Student::marks = 123;
+
+// int main(){
+
+// // Student::display();
+
+// cout<<"Size of class : "<<sizeof(Student)<<endl;
+
+// }
+
+
+
+
+// Array of Objects
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+//   private :
+
+//     string name;
+//     int rollno;
+//     int marks;
+
+
+//   public :
+
+//   void setValue(string name, int rollno, int marks ){
+//     this->name = name;
+//     this->rollno = rollno;
+//     this->marks = marks;
+//   }
+
+//   void getdisplay(){
+//     cout<<"Name : "<<name<<endl;
+//     cout<<"Roll No : "<<rollno<<endl;
+//     cout<<"Marks : "<<marks<<endl;
+//     }
+
+// };
+
+// int main(){
+
+//   Student s1[3];
+ 
+//  s1[0].setValue("Pawan",12,100);
+//  s1[0].getdisplay();
+//  s1[1].setValue("Vishwa",122,100);
+//  s1[1].getdisplay();
+//  s1[2].setValue("Priyanshi",125,100);
+//  s1[2].getdisplay();
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+//   public :
+
+//     string name;
+//     int rollno;
+//     int marks;
+
+
+//   public :
+
+//   void getdisplay(){
+//     cout<<"Name : "<<name<<endl;
+//     cout<<"Roll No : "<<rollno<<endl;
+//     cout<<"Marks : "<<marks<<endl;
+//     }
+
+// };
+
+// int main(){
+
+//   Student *s1 = new Student();  // object created
+
+//     // s1.name = "Pawan"; // Not ok
+//     // s1.rollno = 12; // Not ok
+//     // s1.marks = 99; // Not ok
+
+//     // s1.getdisplay(); // Not ok
+
+
+//     s1->name = "Pawan"; // ok
+//     s1->rollno = 12; //  ok
+//     s1->marks = 99; //  ok
+
+//     s1->getdisplay(); //  ok
+
+
+// }
+
+//  Inheritance 
+
+// #include<iostream>
+// using namespace std;
+
+// class Base{
+//     public:
+
+//     void display(){
+//         cout<<"Parent Behaviour...";
+//     }
+// };
+
+// class Chlid : public Base{
+    
+// };
+
+
+// int main(){
+//         Chlid ch;
+
+//         ch.display();
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Base{
+//     public:
+
+//     void display(){
+//         cout<<"Parent Behaviour...";
+//     }
+// };
+
+// class Chlid : public Base{
+//     public:
+//     void display(){
+//         cout<<"Child Behaviour...";
+//     }
+// };
+
+
+// int main(){
+//         Chlid ch;
+
+//         ch.display();
+// }
+
+
+// inheritance ambiguity
+
 #include<iostream>
 using namespace std;
 
-class Student{
-  // public :
-  // static int age;
-  // static int marks;
-  // static int display(){
-  //   cout<<"Age : "<<age<<endl;
-  // }
+// Base class A
+
+class A {
+	public:
+
+	void behaviour() {
+		cout << " I am in class A" << endl;
+	}
+};
+
+// Base class B
+
+class B {
+	public:
+
+	void behaviour() {
+		cout << " I am in class B" << endl;
+	}
+};
+
+// Derived class C
+
+class C: public A, public B {
+
 
 };
 
-// int Student::age = 24;
-// int Student::marks = 123;
+// Driver Code
 
-int main(){
+int main() {
 
-// Student::display();
+	// Created an object of class C
 
-cout<<"Size of class : "<<sizeof(Student)<<endl;
+	C c1;
 
+	// Calling function func()
+
+	c1.behaviour();
+
+	return 0;
 }
-
