@@ -2354,47 +2354,146 @@
 
 // inheritance ambiguity
 
+// #include<iostream>
+// using namespace std;
+
+// // Base class A
+
+// class A {
+// 	public:
+
+// 	void behaviour() {
+// 		cout << " I am in class A" << endl;
+// 	}
+// };
+
+// // Base class B
+
+// class B {
+// 	public:
+
+// 	void behaviour() {
+// 		cout << " I am in class B" << endl;
+// 	}
+// };
+
+// // Derived class C
+
+// class C: public A, public B {
+
+
+// };
+
+// // Driver Code
+
+// int main() {
+
+// 	// Created an object of class C
+
+// 	C c1;
+
+// 	// Calling function func()
+
+// 	c1.behaviour();
+
+// 	return 0;
+// }
+
+
+
+// Reference Variable
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+// 	int a = 15;
+
+// 	int &ref = a;
+
+// 	cout<<"Value of a : "<<a<<endl;
+// 	cout<<"Value of ref : "<<ref<<endl;
+
+
+// 	cout<<"Address of a : "<<&a<<endl;
+// 	cout<<"Address of ref : "<<&ref<<endl;
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+// 	public :
+// 	int age;
+// 	int marks;
+
+// 	public :
+
+// 	//Constructor
+
+// 	Student(int age, int marks){
+// 		this->age = age;
+// 		this->marks= marks;
+// 	}
+
+// 	//Copy Constructor
+
+// 	Student(Student &other){
+// 		this->age = other.age;
+// 		this->marks= other.marks;
+// 	}
+
+// 	int display(){
+// 		cout<<"Age : "<<age<<endl;
+// 		cout<<"Marks : "<<marks<<endl;
+// 	}
+
+
+// };
+
+// int main(){
+
+// 	Student s1(24,99);   // constructor
+// 	Student s2 = s1;    // Call copy constructor  => shallow copy
+
+// 	s2.display();
+	
+// }
+
+
 #include<iostream>
 using namespace std;
 
-// Base class A
+class Student{
+	public :
+	int *age;
+	int marks;
 
-class A {
-	public:
+	public :
 
-	void behaviour() {
-		cout << " I am in class A" << endl;
+	//Constructor
+
+	Student(int age1,int marks){
+		age = new int;   //Allocated memory
+		*age = age1;     // inisilization
+		this->marks = marks;
+	
 	}
-};
 
-// Base class B
 
-class B {
-	public:
 
-	void behaviour() {
-		cout << " I am in class B" << endl;
+	int display(){
+		cout<<"Age : "<<*age<<endl;
+		cout<<"Marks : "<<marks<<endl;
+		
 	}
-};
-
-// Derived class C
-
-class C: public A, public B {
 
 
 };
 
-// Driver Code
+int main(){
 
-int main() {
-
-	// Created an object of class C
-
-	C c1;
-
-	// Calling function func()
-
-	c1.behaviour();
-
-	return 0;
+	Student s1(24,100);   // constructor
+	s1.display();
 }
