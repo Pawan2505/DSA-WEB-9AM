@@ -2462,38 +2462,511 @@
 // }
 
 
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+// 	public :
+// 	int *age;
+// 	int marks;
+
+// 	public :
+
+// 	//Constructor
+
+// 	Student(int age1,int marks){
+// 		age = new int;   //Allocated memory
+// 		*age = age1;     // inisilization
+// 		this->marks = marks;
+	
+// 	}
+
+
+
+// 	int display(){
+// 		cout<<"Age : "<<*age<<endl;
+// 		cout<<"Marks : "<<marks<<endl;
+		
+// 	}
+
+
+// };
+
+// int main(){
+
+// 	Student s1(24,100);   // constructor
+// 	s1.display();
+// }
+
+
+
+//  Single Inheritance
+
+// #include<iostream>
+// using namespace std;
+
+// class Food{
+// 	public :
+
+// 	string name;
+
+// 	public :
+
+// 	string setfood(string op){
+// 		name = op;
+// 	}
+
+// 	string energy(){
+// 		cout<<"Food give energy..."<<endl;
+
+// 		cout<<name<<endl;
+// 	}
+// };
+
+// class Beans : public Food{
+// 	public : 
+
+// 	void protiens(){
+// 		cout<<"Beans give protiens...";
+// 	}
+// };
+
+// int main(){
+
+// 	Food f1;
+
+// 	f1.setfood("Orange");
+
+// 	Beans b1;
+
+// 	b1.energy();
+
+// }
+
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// class Food{
+
+// 	public :
+
+// 	string name;
+
+// 	public :
+
+// 	void setfood(string op){
+// 		this->name = name;
+// 	}
+
+// 	void energy(){
+// 		cout<<"Food give energy..."<<endl;
+
+// 		cout<<this->name<<endl;
+// 	}
+// };
+
+// class Beans : public Food{
+// 	public :
+
+// 	public :
+// 	void protien(){
+// 		cout<<"Name : "<<this->name<<endl;
+// 	}
+// };
+
+
+// int main(){
+
+// 	Food f1;
+// 		f1.setfood("Orange");
+
+// 		f1.energy();
+
+
+// 	Beans b1;
+
+// 	b1.protien();
+
+// 	b1.energy();
+
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+// 	public :
+
+// 	int age;
+// 	int marks;
+
+// public :
+
+// 	Student(int age, int marks){
+// 	this->age = age;
+// 	this->marks = marks;
+// 	}
+
+// };
+
+// class Vishva: public Student{
+	
+// 	public :
+// 	Vishva(int age, int marks) : Student(age,marks) {
+
+// 	}
+
+// 	void print(){
+// 		cout<<"Age : "<<age<<endl;
+// 		cout<<"Marks : "<<marks<<endl;
+// 	}
+// };
+
+// int main(){
+// 	// Student s1(24);
+
+// 	Vishva v1(24,100);
+
+// 	v1.print();
+// }
+
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+// 	public :
+
+// 	int age;
+// 	int marks;
+
+// public :
+
+// 	Student(int age, int marks){
+// 	this->age = age;
+// 	this->marks = marks;
+// 	}
+
+// };
+
+// class Vishva: public Student{
+	
+// 	public :
+// 	Vishva(int age, int marks) : Student(age,marks) {
+
+// 	}
+
+// 	void print(){
+// 		cout<<"Age : "<<age<<endl;
+// 		cout<<"Marks : "<<marks<<endl;
+// 	}
+// };
+
+// int main(){
+// 	// Student s1(24);
+
+// 	Vishva v1(24,100);
+
+// 	v1.print();
+// }
+
+
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+
+// public :
+
+// 	void students(){
+// 		cout<<"Student Class..."<<endl;
+// 	}
+// };
+
+// class Vishva: public Student{
+	
+// public:
+
+// 	void print(){
+// 		cout<<"Child class..."<<endl;
+// 	}
+// };
+
+// int main(){
+// 	// Student s1(24);
+
+// 	Vishva v1;
+
+// 	v1.print();
+// 	v1.students();
+// }
+
+
+// Multilevel Inheritance
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+
+// public :
+
+// 	void students(){
+// 		cout<<"Student Class..."<<endl;
+// 	}
+// };
+
+// class Vishva: public Student{
+	
+// public:
+
+// 	void print(){
+// 		cout<<"Child class..."<<endl;
+// 	}
+// };
+
+
+// class Sejal: public Vishva{
+// 	public:
+	
+// 	void sejals(){
+// 		cout<<"Sejal Class.."<<endl;
+// 	}
+// };
+
+// int main(){
+// 	// Student s1(24);
+
+// 	// Vishva v1;
+
+// 	// v1.print();
+// 	// v1.students();
+
+
+// 	Sejal sj;
+// 	sj.sejals();
+// 	sj.print();
+// 	sj.students();
+// }
+
+
+//   Multiple Inheritance
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+
+// public :
+
+// 	void students(){
+// 		cout<<"Student Class..."<<endl;
+// 	}
+// };
+
+// class Vishva{
+	
+// public:
+
+// 	void print(){
+// 		cout<<"Child class..."<<endl;
+// 	}
+// };
+
+
+// class Sejal: public Vishva , public Student{
+// 	public:
+	
+// 	void sejals(){
+// 		cout<<"Sejal Class.."<<endl;
+// 	}
+// };
+
+// int main(){
+// 	// Student s1(24);
+
+// 	// Vishva v1;
+
+// 	// v1.print();
+// 	// v1.students();
+
+
+// 	Sejal sj;
+// 	sj.sejals();
+// 	sj.print();
+// 	sj.students();
+// }
+
+
+
+// Hierarchical Inheritance
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+
+// public :
+
+// 	void students(){
+// 		cout<<"Student Class..."<<endl;
+// 	}
+// };
+
+// class Vishva : public Student{
+	
+// public:
+
+// 	void print(){
+// 		cout<<"Child class..."<<endl;
+// 	}
+// };
+
+
+// class Sejal: public Student{
+// 	public:
+	
+// 	void sejals(){
+// 		cout<<"Sejal Class.."<<endl;
+// 	}
+// };
+
+// int main(){
+
+// 	Vishva v1;
+
+// 	v1.students();
+
+
+// 	Sejal s1;
+
+// 	s1.students();
+
+// }
+
+
+
+
+// inheritance ambiguity
+
+// #include<iostream>
+// using namespace std;
+
+// // Base class A
+
+// class A {
+// 	public:
+
+// 	void behaviour() {
+// 		cout << " I am in class A" << endl;
+// 	}
+// };
+
+// // Base class B
+
+// class B {
+// 	public:
+
+// 	void behaviour() {
+// 		cout << " I am in class B" << endl;
+// 	}
+// };
+
+// // Derived class C
+
+// class C: public A, public B {
+
+
+// };
+
+// // Driver Code
+
+// int main() {
+
+// 	// Created an object of class C
+
+// 	C c1;
+
+// 	// Calling function func()
+
+// 	c1.A::behaviour();
+// 	c1.B::behaviour();
+
+// 	return 0;
+// }
+
+
+// Hybrid Inheritance
+
 #include<iostream>
 using namespace std;
 
-class Student{
-	public :
-	int *age;
-	int marks;
+// Base class A
 
-	public :
+class A {
+	public:
 
-	//Constructor
-
-	Student(int age1,int marks){
-		age = new int;   //Allocated memory
-		*age = age1;     // inisilization
-		this->marks = marks;
-	
+	void behaviour() {
+		cout << " I am in class A" << endl;
 	}
+};
 
 
 
-	int display(){
-		cout<<"Age : "<<*age<<endl;
-		cout<<"Marks : "<<marks<<endl;
-		
+class B : virtual public A  {
+	public:
+
+	void behaviour() {
+		cout << " I am in class B" << endl;
 	}
+};
 
+
+
+class C:virtual public A {
+	public:
+void behaviour() {
+		cout << " I am in class C" << endl;
+	}
 
 };
 
-int main(){
+class D: public B, public C {
+	public:
+void behaviour() {
+		cout << " I am in class D" << endl;
+	}
 
-	Student s1(24,100);   // constructor
-	s1.display();
+};
+
+// Driver Code
+
+int main() {
+
+	D d1;
+
+	d1.behaviour();
+	d1.B::behaviour();
+	d1.C::behaviour();
+
+	return 0;
 }
