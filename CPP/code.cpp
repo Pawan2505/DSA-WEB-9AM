@@ -2917,56 +2917,204 @@
 
 // Hybrid Inheritance
 
+// #include<iostream>
+// using namespace std;
+
+// // Base class A
+
+// class A {
+// 	public:
+
+// 	void behaviour() {
+// 		cout << " I am in class A" << endl;
+// 	}
+// };
+
+
+
+// class B : virtual public A  {
+// 	public:
+
+// 	void behaviour() {
+// 		cout << " I am in class B" << endl;
+// 	}
+// };
+
+
+
+// class C:virtual public A {
+// 	public:
+// void behaviour() {
+// 		cout << " I am in class C" << endl;
+// 	}
+
+// };
+
+// class D: public B, public C {
+// 	public:
+// void behaviour() {
+// 		cout << " I am in class D" << endl;
+// 	}
+
+// };
+
+// // Driver Code
+
+// int main() {
+
+// 	D d1;
+
+// 	d1.behaviour();
+// 	d1.B::behaviour();
+// 	d1.C::behaviour();
+
+// 	return 0;
+// }
+
+//Mode of inheritance 
+
+// public to public, protected, private
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+// 	public :
+
+// 	int age;
+// };
+
+// class Vatsal : private Student{
+
+// 	public :
+
+// 	void display(){    
+// 		cout<<"Age : "<<age<<endl;
+// 	}
+
+// };
+
+
+
+// int main(){
+// Vatsal v1;
+
+// v1.display();  // Derive class k andar access ho raha 
+
+// // cout<<"public way access age : "<<v1.age<<endl;   //public -> bahar se acess   // Not Ok
+
+// }
+
+
+
+
+
+// // protected to public, protected, private
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+// 	protected :
+
+// 	int age;
+// };
+
+// class Vatsal : private Student{
+
+// 	public :
+
+// 	void display(){    
+// 		cout<<"Age : "<<age<<endl;
+// 	}
+
+// };
+
+
+
+// int main(){
+// Vatsal v1;
+
+// v1.display();  // Derive class k andar access ho raha 
+
+// // cout<<"public way access age : "<<v1.age<<endl;   //public -> bahar se acess   // Not Ok
+
+// }
+
+
+
+// private to public, protected, private
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+// 	private :
+
+// 	int age;
+// };
+
+// class Vatsal : private Student{
+
+// 	public :
+
+// 	void display(){    
+// 		cout<<"Age : "<<age<<endl;
+// 	}
+
+// };
+
+
+
+// int main(){
+// Vatsal v1;
+
+// v1.display();  // Derive class k andar access ho raha 
+
+// // cout<<"public way access age : "<<v1.age<<endl;   //public -> bahar se acess   // Not Ok
+
+// }
+
+
+
+
+
+
 #include<iostream>
 using namespace std;
 
-// Base class A
+class Student{
 
-class A {
-	public:
+	public :
 
-	void behaviour() {
-		cout << " I am in class A" << endl;
+	string name;
+
+public :
+
+	void display(){
+		cout<<"Hello Students ..."<<endl;
 	}
+	int display(string name){
+		cout<<"Hello Students ..."<<endl;
+	}
+
+
 };
 
 
 
-class B : virtual public A  {
-	public:
-
-	void behaviour() {
-		cout << " I am in class B" << endl;
-	}
-};
 
 
+int main(){
 
-class C:virtual public A {
-	public:
-void behaviour() {
-		cout << " I am in class C" << endl;
-	}
+Student s1;
 
-};
+s1.name = "Pawan";
 
-class D: public B, public C {
-	public:
-void behaviour() {
-		cout << " I am in class D" << endl;
-	}
+s1.display();
 
-};
-
-// Driver Code
-
-int main() {
-
-	D d1;
-
-	d1.behaviour();
-	d1.B::behaviour();
-	d1.C::behaviour();
-
-	return 0;
 }
+
+
+
+
