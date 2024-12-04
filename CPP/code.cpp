@@ -3077,44 +3077,203 @@
 
 
 
+// Polymorphism  -> compile time 
 
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+// 	public :
+
+// 	string name;
+
+// public :
+
+// 	void display(){
+// 		cout<<"Hello Students ..."<<endl;
+// 	}
+// 	int display(string name){
+// 		cout<<"Hello Students ..."<<endl;
+// 	}
+
+
+// };
+
+
+
+
+
+// int main(){
+
+// Student s1;
+
+// s1.name = "Pawan";
+
+// s1.display();
+
+// }
+
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+// 	public :
+
+// 	string name;
+
+// public :
+
+// 	void display(){
+// 		cout<<"Parameterless Hello Students ..."<<endl;
+// 	}
+
+// 	void display(string name){
+// 		this->name = name;
+// 		cout<<"Parameterized Hello Students ..."<<name<<endl;
+// 	}
+
+
+// };
+
+// int main(){
+
+// Student s1;
+
+
+// s1.display();
+// s1.display("Pawan");
+
+// }
+
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+// 	public :
+
+// 	int id;
+// 	string name;
+// 	float salary;
+
+
+// public :
+
+// Student(){
+// 	id = 12;
+// 	name = "Pawan";
+// 	salary = 12345;
+// }
+
+
+// Student(int id, string name, float salary){
+// 	this->id = id;
+// 	this->name = name;
+// 	this->salary = salary;
+// }
+
+// 	void display(){
+// 		cout<<"Id : "<<id<<endl;
+// 		cout<<"Name : "<<name<<endl;
+// 		cout<<"Salary : "<<salary<<endl;
+// 	}
+
+// };
+
+// int main(){
+
+// Student s1;
+// s1.display();
+// Student s2(1,"Rahul",1222);
+// s2.display();
+// Student s3(2,"Ram",999.58);
+// s3.display();
+
+
+// }
+
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Jyoti{
+
+// 	public :
+
+// virtual	void teaching(){
+// 		cout<<"Madam teaches backend..."<<endl;
+// 	}
+
+// };
+
+// class Pawan : public Jyoti{
+// public :
+
+// 	void teaching() override{
+// 		cout<<"I teach Frontend..."<<endl;
+// 	}
+// };
+
+// int main(){
+
+// 	Pawan p1;
+
+// 	p1.teaching();
+
+// }
+
+
+
+// Run-time Polymorphism
 
 
 #include<iostream>
 using namespace std;
 
-class Student{
+class Jyoti{
 
 	public :
 
-	string name;
-
-public :
-
-	void display(){
-		cout<<"Hello Students ..."<<endl;
+virtual	void teaching(){
+		cout<<"Madam teaches backend..."<<endl;
 	}
-	int display(string name){
-		cout<<"Hello Students ..."<<endl;
-	}
-
 
 };
 
+class Pawan : public Jyoti{
+public :
 
+	void teaching() override{
 
-
+		// Jyoti::teaching();
+		cout<<"I teach Frontend..."<<endl;
+	}
+};
 
 int main(){
 
-Student s1;
+	// Jyoti j1;
+	// j1.teaching();
 
-s1.name = "Pawan";
+	Pawan p1;
 
-s1.display();
+	p1.teaching();
+
+	p1.Jyoti::teaching();
 
 }
-
-
-
-
