@@ -3242,38 +3242,206 @@
 // Run-time Polymorphism
 
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-class Jyoti{
+// class Jyoti{
 
-	public :
+// 	public :
 
-virtual	void teaching(){
-		cout<<"Madam teaches backend..."<<endl;
-	}
+// virtual	void teaching(){
+// 		cout<<"Madam teaches backend..."<<endl;
+// 	}
 
-};
+// };
 
-class Pawan : public Jyoti{
-public :
+// class Pawan : public Jyoti{
+// public :
 
-	void teaching() override{
+// 	void teaching() override{
 
-		// Jyoti::teaching();
-		cout<<"I teach Frontend..."<<endl;
-	}
-};
+// 		// Jyoti::teaching();
+// 		cout<<"I teach Frontend..."<<endl;
+// 	}
+// };
 
-int main(){
+// int main(){
 
-	// Jyoti j1;
-	// j1.teaching();
+// 	// Jyoti j1;
+// 	// j1.teaching();
 
-	Pawan p1;
+// 	Pawan p1;
 
-	p1.teaching();
+// 	p1.teaching();
 
-	p1.Jyoti::teaching();
+// 	p1.Jyoti::teaching();
 
-}
+// }
+
+
+// Abstraction Class
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+// public :
+
+// virtual void study() = 0;  // pure vartual function
+
+// void display(){
+// 	cout<<"This is Abstract Class! "<<endl;
+// }
+
+// };
+
+
+// int main(){
+
+// 	Student s1;  // Not Ok
+
+// 	// s1.display();
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+// public :
+
+// virtual void study() = 0;  // pure vartual function
+
+// void display(){
+// 	cout<<"This is Abstract Class! "<<endl;
+// }
+
+// };
+
+// class Sejal : public Student{
+// 	public :
+
+// 	void study()override{
+// 	cout<<"Sejal Class..."<<endl;
+// 	}
+// };
+
+
+// int main(){
+
+// 	Sejal sj;
+
+// 	sj.study(); 
+
+// }
+
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+// public :
+
+// int age;
+// int marks;
+
+// Student(int age, int marks){
+// 	this->age = age;
+// 	this->marks = marks;
+
+// 	// cout<<"Age : "<<age<<endl;
+// 	// cout<<"Marks : "<<marks<<endl;
+
+// }
+
+// virtual void study() = 0;  // pure vartual function
+
+// void display(){
+// 	cout<<"This is Abstract Class! "<<endl;
+// }
+
+// };
+
+// class Sejal : public Student{
+// 	public :
+
+// 	Sejal(int age, int marks) : Student(age,marks){}
+
+// 	void study()override{
+// 	cout<<"Sejal Class..."<<endl;
+// 	cout<<"Age : "<<age<<endl;
+// 	cout<<"Marks : "<<marks<<endl;
+// 	}
+
+// };
+
+
+// int main(){
+
+// 	Sejal sj(19, 100);
+
+// 	sj.study(); 
+
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+// public :
+
+// int age;
+// int marks;
+
+// Student(int age, int marks) : age(age), marks(marks){}
+
+// virtual void study() = 0;  // pure vartual function
+
+// void display(){
+// 	cout<<"This is Abstract Class! "<<endl;
+// }
+
+// };
+
+// class Sejal : public Student{
+// 	public :
+
+// 	Sejal(int age, int marks) : Student(age,marks){}
+
+// 	void study()override{
+// 	cout<<"Sejal Class..."<<endl;
+// 	cout<<"Age : "<<age<<endl;
+// 	cout<<"Marks : "<<marks<<endl;
+// 	}
+
+// };
+
+
+// int main(){
+
+// 	Sejal sj(19, 100);
+
+// 	sj.study(); 
+
+// }
+
+
+https://docs.google.com/document/d/15KPPKNqE8Sqix9bCv4SBBp8OQ4nUuPPkBUzAiAr4bJo/edit?tab=t.0
+https://docs.google.com/document/d/1zGlyazKn16JqkH2AOGI_FM3XDU3zYIseb4P69aOxguU/edit?tab=t.0
+https://docs.google.com/document/d/1t9Scukn0ElLTLhxqhb2F_LIDehR8xTAJXZPzgqK9Dv8/edit?tab=t.0
+https://docs.google.com/document/d/1mjJ_sZ9sOVkL6RPun-6RDagVVPIEt6DSNyYeYVnp7nE/edit?tab=t.0
+https://docs.google.com/document/d/1l0eJpbp2yW25oaKcfBpFYLJYhPpJUYCVzqcCeKBPj9k/edit?tab=t.0
+https://docs.google.com/document/d/1ze_amjGr65pheepsFy-k4YrJF0sjb1t6q83ZzBz9kZg/edit?tab=t.0
+https://docs.google.com/document/d/1ze_amjGr65pheepsFy-k4YrJF0sjb1t6q83ZzBz9kZg/edit?tab=t.0
