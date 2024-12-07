@@ -1168,7 +1168,7 @@
 
 
 
-//Array
+// Array  
 
 
 // #include<iostream>
@@ -3438,10 +3438,303 @@
 // }
 
 
-https://docs.google.com/document/d/15KPPKNqE8Sqix9bCv4SBBp8OQ4nUuPPkBUzAiAr4bJo/edit?tab=t.0
-https://docs.google.com/document/d/1zGlyazKn16JqkH2AOGI_FM3XDU3zYIseb4P69aOxguU/edit?tab=t.0
-https://docs.google.com/document/d/1t9Scukn0ElLTLhxqhb2F_LIDehR8xTAJXZPzgqK9Dv8/edit?tab=t.0
-https://docs.google.com/document/d/1mjJ_sZ9sOVkL6RPun-6RDagVVPIEt6DSNyYeYVnp7nE/edit?tab=t.0
-https://docs.google.com/document/d/1l0eJpbp2yW25oaKcfBpFYLJYhPpJUYCVzqcCeKBPj9k/edit?tab=t.0
-https://docs.google.com/document/d/1ze_amjGr65pheepsFy-k4YrJF0sjb1t6q83ZzBz9kZg/edit?tab=t.0
-https://docs.google.com/document/d/1ze_amjGr65pheepsFy-k4YrJF0sjb1t6q83ZzBz9kZg/edit?tab=t.0
+// https://docs.google.com/document/d/15KPPKNqE8Sqix9bCv4SBBp8OQ4nUuPPkBUzAiAr4bJo/edit?tab=t.0
+// https://docs.google.com/document/d/1zGlyazKn16JqkH2AOGI_FM3XDU3zYIseb4P69aOxguU/edit?tab=t.0
+// https://docs.google.com/document/d/1t9Scukn0ElLTLhxqhb2F_LIDehR8xTAJXZPzgqK9Dv8/edit?tab=t.0
+// https://docs.google.com/document/d/1mjJ_sZ9sOVkL6RPun-6RDagVVPIEt6DSNyYeYVnp7nE/edit?tab=t.0
+// https://docs.google.com/document/d/1l0eJpbp2yW25oaKcfBpFYLJYhPpJUYCVzqcCeKBPj9k/edit?tab=t.0
+// https://docs.google.com/document/d/1ze_amjGr65pheepsFy-k4YrJF0sjb1t6q83ZzBz9kZg/edit?tab=t.0
+// https://docs.google.com/document/d/1ze_amjGr65pheepsFy-k4YrJF0sjb1t6q83ZzBz9kZg/edit?tab=t.0
+
+
+
+// String  : 
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+//     string str = "Pawan Maurya";
+
+//     cout<<str;
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+//     string str;
+
+//     cout<<"Please enter your name : ";
+//     cin>>str;   // It not take space inside of string
+
+//     cout<<str;
+// }
+
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+//     string str;
+
+//     cout<<"Please enter your name : ";
+//     // cin>>str;   // It not take space inside of string
+
+//     getline(cin, str);
+
+//     cout<<str;
+// }
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+//     string str;
+
+//     cout<<"Please enter your name : ";
+//     // cin>>str;   // It not take space inside of string
+
+//     getline(cin, str);
+
+//     cout<<str;
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+//     string str;
+
+//     cout<<"Please enter your name : ";
+//     // cin>>str;   // It not take space inside of string
+
+//     getline(cin, str);
+
+//     cout<<str;
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+//     string str1 = "Pawan";
+//     string str2 = "Maurya";
+
+//     cout<<str1 + " "+ str2<<endl;
+
+// }
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+//     string str1 = "Pawan";
+//     string str2 = " Maurya";
+
+//     cout<<str1.append(str2)<<endl;
+
+// }
+// #include<iostream>
+// #include<string>
+// #include<cstring>
+// using namespace std;
+
+// int main(){
+//     char str1[6] = "Pawan";
+
+//     cout<<"First size : "<<sizeof(str1)<<endl;
+//     char str2[8] = " Maurya";
+
+//     strcat(str1,str2);
+
+//     cout<<str1<<endl;
+//      cout<<"Updated size : "<<sizeof(str1)<<endl;
+
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+   
+//    string str1 = "Pawan";
+
+//    cout<<str1.size()<<endl;
+
+// }
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+   
+//    string str1 = "Pawan";
+
+//    string str2 = "Maurya";
+
+//    cout<<str1.append(str2)<<endl;
+
+//    cout<<str1.size()<<endl;
+
+// }
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+   
+//    string str1 = "Pawan\0Maurya";
+
+//    cout<<str1<<endl;
+
+
+// }
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+   
+//    string str1 = "Pawan Maurya";
+
+//     cout<<str1[5]<<endl;
+
+
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+   
+//    string str1 = "Pawan Maurya";
+
+//     // cout<<str1.length()<<endl;
+//     // cout<<str1.size()<<endl;
+
+
+//     for(int i = 0; i < str1.length(); i++){
+//         cout<<str1[i]<<endl;
+//     }
+
+
+// }
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+   
+//    string str1 = "Pawan Maurya";
+
+//     // cout<<str1.length()<<endl;
+//     // cout<<str1.size()<<endl;
+
+//    str1[0] = 'q';
+
+//     for(int i = 0; i < str1.length(); i++){
+//         cout<<str1[i]<<endl;
+//     }
+
+
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+   
+//    string str1 = "Pawan Maurya";
+
+//   cout<<str1.insert(3, "Nancy");
+
+
+// }
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+   
+//    string str1 = "Pawan Maurya";
+
+//   cout<<str1.erase(2,2);
+
+
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+   
+//    string str1 = "Pawan Maurya";
+
+//   cout<<str1.at(8);
+
+
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+   
+//    string str1 = "Pawan Maurya";
+
+//   cout<<str1.find('a');
+
+
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+   
+//    string str1 = "Pawan Maurya";
+
+//     str1.clear();
+
+//   cout<<str1<<endl;
+
+
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+   
+//    int num = 'A';
+//    int num1 = 'Z';
+
+//    cout<<num<<endl;
+//    cout<<num1<<endl;
+// }
