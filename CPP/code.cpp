@@ -3738,3 +3738,197 @@
 //    cout<<num<<endl;
 //    cout<<num1<<endl;
 // }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int a = 10;  // stack
+
+//     int *p = &a;  // heap
+
+//     cout<<*p<<endl;
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int a = 10;  // stack
+
+//     int *p = &a;  // heap -> allocate memory
+
+//     cout<<*p<<endl;
+
+//     delete p;   // Deallocate memory
+
+//     cout<<*p<<endl;  
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     int *p = new int;  // heap -> allocate memory
+
+//     *p = 10;
+
+//     cout<<*p<<endl;
+
+//     delete p;   // Deallocate memory
+
+//     cout<<*p<<endl;  
+
+
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     int *p = new int;  // heap -> allocate memory
+
+//     *p = 10;
+
+//     cout<<*p<<endl;
+
+//     delete p;   // Deallocate memory
+
+//     p = new int[5];   // dangling pointer -> kabhi unbehaviour show kr skta hai;
+
+//     p[0]  = 11;
+//     p[1] =12;
+//     p[2] =13;
+//     p[3] =14;
+//     p[4] =15;
+
+
+//     for(int i = 0; i < 5; i++){
+//         cout<<*(p+i)<<endl;
+//     }
+  
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     int *p = new int;  // heap -> allocate memory
+
+//     *p = 10;
+
+//     cout<<*p<<endl;
+
+//     delete p;   // Deallocate memory
+
+//     p = nullptr;  // nullptr prevent from dangling pointer 
+
+//     p = new int[5];   
+
+//     p[0]  = 11;
+//     p[1] =12;
+//     p[2] =13;
+//     p[3] =14;
+//     p[4] =15;
+
+
+//     for(int i = 0; i < 5; i++){
+//         cout<<*(p+i)<<endl;
+//     }
+  
+
+//  delete[] p;    // Deallocate memory
+
+//  return 0;
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     public : 
+//     int *p;
+
+//     Student(int a){
+
+//         p = new int; // Allocated memory
+
+//         cout<<"Allocated Memory !"<<endl;
+
+//         *p = a;
+//     }
+
+//     ~Student(){
+//         delete p;  // Deallocated memory
+
+//         cout<<"Deallocated Memory!"<<endl;
+
+//     }
+
+//     void display(){
+//         cout<<*p<<endl;
+//     }
+// };
+
+// int main(){
+
+//     Student s1(10);
+
+//     s1.display();
+
+// }
+
+#include<iostream>
+using namespace std;
+
+class Student{
+    public : 
+    int *p;
+
+    Student(int a){
+
+        p = new int; // Allocated memory
+
+        cout<<"Allocated Memory !"<<endl;
+
+        *p = a;
+    }
+
+    ~Student(){
+        delete p;  // Deallocated memory
+
+        cout<<"Deallocated Memory!"<<endl;
+
+    }
+
+    void display(){
+        cout<<*p<<endl;
+    }
+};
+
+int main(){
+
+    // Student s1(10);
+    // s1.display();
+
+
+    Student *s1 = new Student(10);
+
+    s1->display();
+
+    delete s1;
+
+}
