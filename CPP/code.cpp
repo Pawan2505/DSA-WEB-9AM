@@ -3891,44 +3891,213 @@
 
 // }
 
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     public : 
+//     int *p;
+
+//     Student(int a){
+
+//         p = new int; // Allocated memory
+
+//         cout<<"Allocated Memory !"<<endl;
+
+//         *p = a;
+//     }
+
+//     ~Student(){
+//         delete p;  // Deallocated memory
+
+//         cout<<"Deallocated Memory!"<<endl;
+
+//     }
+
+//     void display(){
+//         cout<<*p<<endl;
+//     }
+// };
+
+// int main(){
+
+//     // Student s1(10);
+//     // s1.display();
+
+
+//     Student *s1 = new Student(10);
+
+//     s1->display();
+
+//     delete s1;
+
+// }
+
+
+// STL : Template -> Function
+
+// #include<iostream>
+// using namespace std;
+
+//   template<typename T>
+
+//   T addition(T num1 , T num2){
+//     T result = num1+num2;
+
+//     cout<<result<<endl;
+//   }
+
+// int main(){
+
+// addition(10,20);
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+//   template<typename T1, typename T2>
+
+//   T2 addition(T1 num1 , T2 num2){
+//     T2 result = num1+num2;
+
+//     cout<<result<<endl;
+//   }
+
+// int main(){
+
+// addition(10,20.2);
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+//   template<typename T>
+
+//   T names(T n){
+//     cout<<n<<endl;
+//   }
+
+// int main(){
+
+// names("Pawan");
+// }
+
+
+// Template  : Class
+
+// #include<iostream>
+// using namespace std;
+
+// template<typename T1, typename T2>
+
+// class Student{
+//     public :
+//     T1 age;
+//     T2 marks;
+
+//     Student(T1 age , T2 marks){
+//        this->age = age;
+//        this->marks = marks; 
+//     }
+
+//     void display(){
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+
+// };
+
+// int main(){
+//     Student<int,int> s1(20,58);
+//     s1.display();
+// }
+
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// int main(){
+
+//     vector<int> v1;
+
+//     // push_back();
+
+//     v1.push_back(10);
+//     v1.push_back(20);
+//     v1.push_back(30);
+//     v1.push_back(40);
+//     v1.push_back(50);
+
+// // ForEach();
+
+// cout<<"Using foreach loop : "<<endl;
+
+//     for(int element : v1){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<endl;
+
+//     // Size()
+
+//     cout<<"Size of Vector : "<<v1.size()<<endl;
+
+
+
+//     // For loop
+
+
+//     cout<<"Using for loop : "<<endl;
+
+//     for(int i = 0; i < v1.size(); i++){
+//         cout<<v1[i]<<" ";
+//     }
+
+//     cout<<endl;
+// }
+
+
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// int main(){
+//     vector<int>v1(5);
+
+//     cout<<"Taking input in vector from user : "<<endl;
+
+//     for(int i = 0; i < v1.size(); i++){
+//         cout<<"Please enter value at "<<i<<" index : ";
+//         cin>>v1[i];
+//     }
+
+
+//     cout<<"Output : "<<endl;
+
+// for(int element : v1){
+//     cout<<element<<" ";
+// }
+
+// cout<<endl;
+    
+// }
+
 #include<iostream>
+#include<vector>
 using namespace std;
 
-class Student{
-    public : 
-    int *p;
-
-    Student(int a){
-
-        p = new int; // Allocated memory
-
-        cout<<"Allocated Memory !"<<endl;
-
-        *p = a;
-    }
-
-    ~Student(){
-        delete p;  // Deallocated memory
-
-        cout<<"Deallocated Memory!"<<endl;
-
-    }
-
-    void display(){
-        cout<<*p<<endl;
-    }
-};
-
 int main(){
-
-    // Student s1(10);
-    // s1.display();
+    vector<int>v1 = {10,20,30,40,50};
 
 
-    Student *s1 = new Student(10);
+    for(int element : v1){
+        cout<<element<<" ";
+    }
 
-    s1->display();
-
-    delete s1;
-
+    cout<<endl;
+    
 }
