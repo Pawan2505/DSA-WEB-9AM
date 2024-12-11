@@ -4086,18 +4086,212 @@
     
 // }
 
-#include<iostream>
-#include<vector>
-using namespace std;
+// #include<iostream>
+// #include<vector>
+// using namespace std;
 
-int main(){
-    vector<int>v1 = {10,20,30,40,50};
+// int main(){
+//     vector<int>v1 = {10,20,30,40,50};
 
 
-    for(int element : v1){
-        cout<<element<<" ";
-    }
+//     for(int element : v1){
+//         cout<<element<<" ";
+//     }
 
-    cout<<endl;
+//     cout<<endl;
     
-}
+// }
+
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// int main(){
+//     vector<int>v1(5, 10);
+
+//     for(int element : v1){
+//         cout<<element<<" ";
+//     }
+// }
+
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// int main(){
+//     vector<int>v1(5);
+
+//     v1.push_back(10);
+//     v1.push_back(20);
+//     v1.push_back(30);
+//     v1.push_back(40);
+//     v1.push_back(50);
+//     v1.push_back(60);
+//     v1.push_back(70);
+//     v1.push_back(80);
+
+// cout<<"Vector element : "<<endl;
+//     for(int element : v1){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<endl;
+
+// cout<<"Size of vector after adding extra element from size : "<<v1.size()<<endl;
+// }
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// int main(){
+//     vector<int>v1(5);
+
+//     v1.push_back(10);
+//     v1.push_back(20);
+//     v1.push_back(30);
+//     v1.push_back(40);
+//     v1.push_back(50);
+//     v1.push_back(60);
+//     v1.push_back(70);
+//     v1.push_back(80);
+
+// cout<<"Vector element : "<<endl;
+//     for(int element : v1){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<endl;
+
+// cout<<"Size of vector after adding extra element from size : "<<v1.size()<<endl;
+// }
+
+// #include<iostream>
+// #include<vector>
+// #include<algorithm>
+// using namespace std;
+
+// int main(){
+//     vector<int>v1;
+
+//     v1.push_back(10);
+//     v1.push_back(220);
+//     v1.push_back(30);
+//     v1.push_back(440);
+//     v1.push_back(50);
+//     v1.push_back(600);
+//     v1.push_back(70);
+//     v1.push_back(80);
+
+// cout<<"Vector element : "<<endl;
+//     for(int element : v1){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<endl;
+
+// cout<<"Size of vector after adding extra element from size : "<<v1.size()<<endl;
+
+
+// // pop_back()
+
+
+// cout<<"Vector After pop_back  : "<<endl;
+
+// v1.pop_back();
+
+//     for(int element : v1){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<endl;
+
+
+//     // at()
+
+//     cout<<"Element present at 3 index : "<<v1.at(3)<<endl;
+
+//     // insert()
+
+//     cout<<"Insert element at 2 index : "<<endl;
+
+//     v1.insert(v1.begin()+2,1000);
+
+//      for(int element : v1){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<endl;
+
+//      cout<<"Delete element at 2 index : "<<endl;
+
+//     v1.erase(v1.begin()+2);
+
+//      for(int element : v1){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<endl;
+
+//     // empty()
+
+//     cout<<"Vector element present : "<<(v1.empty()? "NO":"YES")<<endl;
+//       for(int element : v1){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<endl;
+
+//     // clear()
+
+//     cout<<"Clear vector : "<<endl;
+
+//     // v1.clear();
+
+//     //  cout<<"Vector element present : "<<(v1.empty()? "NO":"YES")<<endl;
+
+//      // reverse()
+
+//      cout<<"Vector Reverse : "<<endl;
+
+//      reverse(v1.begin(),v1.end());
+
+//         for(int element : v1){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<endl;
+
+//     cout<<"Vector Sort : "<<endl;
+
+//     sort(v1.begin(),v1.end());
+//         for(int element : v1){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<endl;
+
+//     // back() 
+
+//     cout<<"Vector Last element : "<<v1.back()<<endl;
+
+//     // *v1.begin()
+
+//     cout<<"Vector First Element : "<<*v1.begin()<<endl;
+
+//     //*(v1.end()-1)
+
+//      cout<<"Vector Last element : "<<*(v1.end()-1)<<endl;
+
+//      // front()
+
+//      cout<<"Vector element at front : "<<v1.front()<<endl;
+// }
+
+
+// https://docs.google.com/document/d/1MiNz-8zwI8m3Tq1YeK-SPWYVEPqq4yxaNU1z9FkMHmg/edit?tab=t.0
+// https://docs.google.com/document/d/1ZeuYVly9Ul7GOquVh5BaoI9XimkLq-ESfk2m5PwzQOU/edit?tab=t.0
+
+
+
