@@ -4295,85 +4295,91 @@
 
 
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-// Create Node
+// // Create Node
 
-class Node{
-    public:
-    int data;
-    Node* next;
+// class Node{
+//     public:
+//     int data;
+//     Node* next;
 
-    Node(int data){
-        this->data = data;
-        this->next = NULL;
-    }
-};
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
 
-// Insert at Tail
+// // Insert at Tail
 
-void insertAtTail(Node* &head, int data){
+// void insertAtTail(Node* &head, int data){
 
-Node* newNode = new Node(data);
+// Node* newNode = new Node(data);
 
-    if(head == NULL){
-        head = newNode;
-        return;
-    }
+//     if(head == NULL){
+//         head = newNode;
+//         return;
+//     }
 
-    Node* temp = head;
+//     Node* temp = head;
 
-    while(temp->next != NULL){
-        temp = temp->next;
-    }
+//     while(temp->next != NULL){
+//         temp = temp->next;
+//     }
 
-    temp->next = newNode;
-}
+//     temp->next = newNode;
+// }
 
-// Linked List Print
+// // Linked List Print
 
-void print(Node* &head){
+// void print(Node* &head){
 
-    if(head == NULL){
-        cout<<"Linked List Empty!"<<endl;
-        return;
-    }
+//     if(head == NULL){
+//         cout<<"Linked List Empty!"<<endl;
+//         return;
+//     }
 
-    Node* temp = head;
+//     Node* temp = head;
 
-    while(temp != NULL){
-        cout<<temp->data<<"->";
-        temp= temp->next;
-    }
+//     while(temp != NULL){
+//         cout<<temp->data<<"->";
+//         temp= temp->next;
+//     }
 
-    cout<<"NULL"<<endl;
+//     cout<<"NULL"<<endl;
 
-}
+// }
 
-int main(){
-    Node* head = NULL;
+// int main(){
+//     Node* head = NULL;
 
-    print(head);
+//     print(head);
 
-    cout<<"Insert 10 at tail : "<<endl;
-    insertAtTail(head, 10);
+//     cout<<"Insert 10 at tail : "<<endl;
+//     insertAtTail(head, 10);
 
-    print(head);
-    cout<<"Insert 20 at tail : "<<endl;
+//     print(head);
+//     cout<<"Insert 20 at tail : "<<endl;
 
-    insertAtTail(head, 20);
-    print(head);
-    cout<<"Insert 30 at tail : "<<endl;
+//     insertAtTail(head, 20);
+//     print(head);
+//     cout<<"Insert 30 at tail : "<<endl;
 
-    insertAtTail(head, 30);
-    print(head);
-    cout<<"Insert 40 at tail : "<<endl;
+//     insertAtTail(head, 30);
+//     print(head);
+//     cout<<"Insert 40 at tail : "<<endl;
 
-    insertAtTail(head, 40);
-    print(head);
-    cout<<"Insert 50 at tail : "<<endl;
+//     insertAtTail(head, 40);
+//     print(head);
+//     cout<<"Insert 50 at tail : "<<endl;
 
-    insertAtTail(head, 50);
-    print(head);
-}
+//     insertAtTail(head, 50);
+//     print(head);
+// }
+
+
+// Today : Task
+
+// https://docs.google.com/document/d/1SmPzK3VuVPydQQlliW6PrMjLBaRqO0vusJABZgwor3E/edit?tab=t.0#heading=h.gjdgxs
+// https://docs.google.com/document/d/1noHP_L2fZ6rIYkiqNLEbpwuOlNR7p19zz05nDpoMf10/edit?tab=t.0
