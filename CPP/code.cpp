@@ -4383,3 +4383,87 @@
 
 // https://docs.google.com/document/d/1SmPzK3VuVPydQQlliW6PrMjLBaRqO0vusJABZgwor3E/edit?tab=t.0#heading=h.gjdgxs
 // https://docs.google.com/document/d/1noHP_L2fZ6rIYkiqNLEbpwuOlNR7p19zz05nDpoMf10/edit?tab=t.0
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Node{
+//     public :
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+
+// void insertAtTail(Node* &head, int data){
+
+//     // Create new Node
+
+//     Node* newNode = new Node(data);
+
+//     // If head point to NULL
+//     if(head == NULL){
+//         head = newNode;
+//         return;
+//     }
+
+// // Create temp pointer for traverse
+//     Node* temp = head;
+
+
+// // Check temp->next point to NULL 
+//     while(temp->next != NULL){
+//         temp = temp->next;
+//     }
+
+// // Add newNode at Tail when temp->next point to NULL
+//     temp->next = newNode;
+
+// }
+
+// void print(Node* &head){
+//     // Check node is empty 
+
+//     if(head == NULL){
+//         cout<<"Linked List Empty!"<<endl;
+//         return;
+//     }
+
+//     // if head not point to NULL then create temp pointer to traverse
+
+//     Node* temp = head;
+
+//     while(temp != NULL){
+//         cout<<temp->data<<"->";
+//         temp = temp->next;
+//     }
+
+//     cout<<"NULL"<<endl;
+// }
+
+
+// int main(){
+//     Node * head = NULL;
+
+//     cout<<"Check linked list empty or not : "<<endl;
+
+//     print(head);
+
+//     cout<<"Insert Node At Tail in Linked List : "<<endl;
+
+//     insertAtTail(head, 10);
+//     insertAtTail(head, 20);
+//     insertAtTail(head, 30);
+//     insertAtTail(head, 40);
+//     insertAtTail(head, 50);
+//     insertAtTail(head, 60);
+
+//     print(head);
+// }
+
