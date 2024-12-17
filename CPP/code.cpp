@@ -4467,3 +4467,142 @@
 //     print(head);
 // }
 
+
+
+#include<iostream>
+using namespace std;
+
+class Node{
+    public :
+    int data;
+    Node* next;
+
+    Node(int data){
+        this->data = data;
+        this->next = NULL;
+    }
+};
+
+void insertAtTail(Node* &head, int data){
+    Node* newNode = new Node(data);
+
+    if(head == NULL){
+        head = newNode;
+        return;
+    }
+
+    Node* temp = head;
+
+    while(temp->next != NULL){
+        temp = temp->next;
+    }
+
+    temp->next = newNode;
+}
+
+
+void insertAtHead(Node* &head, int data){
+
+    Node* newNode = new Node(data);
+
+    if(head == NULL){
+        head = newNode;
+        return;
+    }
+
+    newNode->next = head;
+    head = newNode;
+}
+
+
+void insertAtPosition(Node* &head, int position, int data ){
+
+    Node* newNode = new Node(data);
+
+    // Position 1
+
+    if(position == 1){
+        newNode->next = head;
+        head = newNode;
+        return;
+    }
+
+
+    Node* temp = head;
+
+    for(int i = 1; i < position-1 && temp != NULL; i++){
+        temp = temp->next;
+    }
+
+    if(temp == NULL){
+        cout<<"Position Out of bound!"<<endl;
+    }
+
+    newNode->next = temp->next;
+    temp->next = newNode;
+
+
+}
+
+
+
+void print(Node* &head){
+
+    if(head == NULL){
+        cout<<"Linked List is Empty!"<<endl;
+        return;
+    }
+
+    Node* temp = head;
+
+    while(temp != NULL){
+        cout<<temp->data<<"->";
+        temp = temp->next;
+    }
+
+
+    cout<<"NULL"<<endl;
+}
+
+
+int main(){
+    Node* head = NULL;
+
+    cout<<"Insert Node at Tail : "<<endl;
+
+    insertAtTail(head,10);
+    insertAtTail(head,20);
+    insertAtTail(head,30);
+    insertAtTail(head,40);
+    insertAtTail(head,50);
+
+    print(head);
+
+
+    cout<<"Insert Node at Head : "<<endl;
+
+    insertAtHead(head,100);
+    insertAtHead(head,200);
+    insertAtHead(head,300);
+    insertAtHead(head,400);
+
+    print(head);
+
+    cout<<"Insert Node at Specific Possition : "<<endl;
+
+    insertAtPosition(head, 3, 1000);
+
+    print(head);
+
+    cout<<"Insert Node at position 1 : "<<endl;
+
+      insertAtPosition(head, 1, 11111);
+
+      print(head);
+
+      cout<<"Insert Node at position out of bound : "<<endl;
+
+      insertAtPosition(head, 13, 11111000);
+
+      print(head);
+}
