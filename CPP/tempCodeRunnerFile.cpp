@@ -1,5 +1,5 @@
-	// Beans b1;
+ cout<<"Update Linked List : "<<endl;
 
-	// b1.protien();
+    //   updateData(head,33, 3000);
 
-	// b1.energy();
+    //   print(head);

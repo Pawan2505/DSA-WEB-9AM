@@ -4565,6 +4565,51 @@ void print(Node* &head){
 }
 
 
+void updateData(Node* &head, int oldData, int newData){
+
+    if(head == NULL){
+        cout<<"Linked  list is Empty!"<<endl;
+        return;
+    }
+
+    Node* temp = head;
+
+    while(temp->data != oldData){
+        temp = temp->next;
+    }
+
+     temp->data = newData;
+   
+  
+}
+
+void deleteData(Node* &head, int pos){
+
+    if(head == NULL){
+        cout<<"Linked  list is Empty!"<<endl;
+        return;
+    }
+
+    Node* temp = head;
+    Node* prev = NULL;
+
+    for(int i=1;i<pos-1;i++)
+    {
+        prev = temp;
+        temp=temp->next;
+       
+    }
+
+    prev->next = temp->next;
+
+    delete temp;
+
+}
+
+
+
+
+
 int main(){
     Node* head = NULL;
 
@@ -4600,9 +4645,18 @@ int main(){
 
       print(head);
 
-      cout<<"Insert Node at position out of bound : "<<endl;
+    //   cout<<"Insert Node at position out of bound : "<<endl;
 
-      insertAtPosition(head, 13, 11111000);
+    //   insertAtPosition(head, 13, 11111000);
 
+    //   print(head);
+    
+    //   cout<<"Update Linked List : "<<endl;
+
+    //   updateData(head,33, 3000);
+
+    //   print(head);
+
+      deleteData(head,3);
       print(head);
 }
