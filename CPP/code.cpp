@@ -4469,194 +4469,356 @@
 
 
 
+// #include<iostream>
+// using namespace std;
+
+// class Node{
+//     public :
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+// void insertAtTail(Node* &head, int data){
+//     Node* newNode = new Node(data);
+
+//     if(head == NULL){
+//         head = newNode;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while(temp->next != NULL){
+//         temp = temp->next;
+//     }
+
+//     temp->next = newNode;
+// }
+
+
+// void insertAtHead(Node* &head, int data){
+
+//     Node* newNode = new Node(data);
+
+//     if(head == NULL){
+//         head = newNode;
+//         return;
+//     }
+
+//     newNode->next = head;
+//     head = newNode;
+// }
+
+
+// void insertAtPosition(Node* &head, int position, int data ){
+
+//     Node* newNode = new Node(data);
+
+//     // Position 1
+
+//     if(position == 1){
+//         newNode->next = head;
+//         head = newNode;
+//         return;
+//     }
+
+
+//     Node* temp = head;
+
+//     for(int i = 1; i < position-1 && temp != NULL; i++){
+//         temp = temp->next;
+//     }
+
+//     if(temp == NULL){
+//         cout<<"Position Out of bound!"<<endl;
+//     }
+
+//     newNode->next = temp->next;
+//     temp->next = newNode;
+
+
+// }
+
+
+
+// void print(Node* &head){
+
+//     if(head == NULL){
+//         cout<<"Linked List is Empty!"<<endl;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while(temp != NULL){
+//         cout<<temp->data<<"->";
+//         temp = temp->next;
+//     }
+
+
+//     cout<<"NULL"<<endl;
+// }
+
+
+// void updateData(Node* &head, int oldData, int newData){
+
+//     if(head == NULL){
+//         cout<<"Linked  list is Empty!"<<endl;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while(temp->data != oldData){
+//         temp = temp->next;
+//     }
+
+//      temp->data = newData;
+   
+  
+// }
+
+// void deleteData(Node* &head, int pos){
+
+//     if(head == NULL){
+//         cout<<"Linked  list is Empty!"<<endl;
+//         return;
+//     }
+
+//     Node* temp = head;
+//     Node* prev = NULL;
+
+//     for(int i=1;i<pos-1;i++)
+//     {
+//         prev = temp;
+//         temp=temp->next;
+       
+//     }
+
+//     prev->next = temp->next;
+
+//     delete temp;
+
+// }
+
+
+
+
+
+// int main(){
+//     Node* head = NULL;
+
+//     cout<<"Insert Node at Tail : "<<endl;
+
+//     insertAtTail(head,10);
+//     insertAtTail(head,20);
+//     insertAtTail(head,30);
+//     insertAtTail(head,40);
+//     insertAtTail(head,50);
+
+//     print(head);
+
+
+//     cout<<"Insert Node at Head : "<<endl;
+
+//     insertAtHead(head,100);
+//     insertAtHead(head,200);
+//     insertAtHead(head,300);
+//     insertAtHead(head,400);
+
+//     print(head);
+
+//     cout<<"Insert Node at Specific Possition : "<<endl;
+
+//     insertAtPosition(head, 3, 1000);
+
+//     print(head);
+
+//     cout<<"Insert Node at position 1 : "<<endl;
+
+//       insertAtPosition(head, 1, 11111);
+
+//       print(head);
+
+//     //   cout<<"Insert Node at position out of bound : "<<endl;
+
+//     //   insertAtPosition(head, 13, 11111000);
+
+//     //   print(head);
+    
+//     //   cout<<"Update Linked List : "<<endl;
+
+//     //   updateData(head,33, 3000);
+
+//     //   print(head);
+
+//       deleteData(head,3);
+//       print(head);
+// }
+
+
+
+// Intro of Stack, its operations, and Creation
+
+
+//  STL : Stack
+
+// #include<iostream>
+// #include<stack>
+// using namespace std;
+
+// int main(){
+//     stack<int>s;
+
+// //push()
+//     cout<<"Push element inside stack with push operation  :"<<endl;
+
+//     s.push(10);
+//     s.push(20);
+//     s.push(30);
+//     s.push(40);
+//     s.push(50);
+//     s.push(60);
+
+// // top()
+
+// cout<<"Peek element in stack : "<<s.top()<<endl;
+
+// // pop()
+
+// s.pop();
+
+// cout<<"Update stack after remove element from stack : "<<s.top()<<endl;
+
+// // size()
+
+// cout<<"Stack size : "<<s.size()<<endl;
+
+// // empty()
+
+// cout<<"Stack is empty or not : "<<s.empty()<<endl;
+
+// // full
+
+// // cout<<"Stack is full or not : "<<s.full()<<endl;
+
+// // display stack
+
+// cout<<"Stack size : "<<s.size()<<endl;
+
+// while(s.size()>0){
+//     cout<<s.top()<<" ";
+//     s.pop();
+// }
+
+// }
+
+
+
+
 #include<iostream>
+#include<stack>
 using namespace std;
 
-class Node{
-    public :
-    int data;
-    Node* next;
+class Stack{
+    public : 
+    stack<int>s;
+    int capacity;
 
-    Node(int data){
-        this->data = data;
-        this->next = NULL;
+    Stack(int cap){
+        capacity = cap;
+    }
+
+    void push(int data){
+
+        if(s.size() >= capacity){
+            cout<<"Stack Overflow!"<<endl;;
+            return;
+        }
+
+        s.push(data);
+        cout<<data<<" pushed in stack!"<<endl;
+
+    }
+
+    int pop(){
+
+        if(s.size() == 0){
+            cout<<"Stack Underflow!"<<endl;
+            return -1;
+        }
+
+        int topElement = s.top();
+        s.pop();
+
+        cout<<topElement<<" popped from stack!"<<endl;
+    }
+
+    void display(){
+        if(s.size() == 0){
+            cout<<"Stack is Empty!"<<endl;
+            return;
+        }
+
+        while(s.size()>0){
+            cout<<s.top()<<" ";
+            s.pop();
+        }
+        cout<<endl;
+    }
+
+    bool isFull(){
+
+        if(s.size() >= capacity){
+            return 1;
+        }else{
+           return 0;
+        }
+    }
+
+    void empty(){
+
+        if(s.empty()){
+            cout<<"Stack is Empty!"<<endl;
+        }else{
+            cout<<"Stack is not Empty!"<<endl;
+        }
     }
 };
 
-void insertAtTail(Node* &head, int data){
-    Node* newNode = new Node(data);
+int main(){
+    
+    Stack mystack(5);
 
-    if(head == NULL){
-        head = newNode;
-        return;
-    }
+    cout<<"Push element in stack : "<<endl;
 
-    Node* temp = head;
-
-    while(temp->next != NULL){
-        temp = temp->next;
-    }
-
-    temp->next = newNode;
-}
+    mystack.push(10);
+    mystack.push(20);
+    mystack.push(30);
+    mystack.push(40);
+    mystack.push(50);
+    // mystack.push(60);
+    // mystack.push(60);
 
 
-void insertAtHead(Node* &head, int data){
+    cout<<"Remove peek element : "<<endl;
 
-    Node* newNode = new Node(data);
+    // mystack.pop();
+    
+  cout<<mystack.isFull()<<endl;
 
-    if(head == NULL){
-        head = newNode;
-        return;
-    }
+    cout<<"Display stack : "<<endl;
+    mystack.display();
 
-    newNode->next = head;
-    head = newNode;
-}
+    mystack.empty();
 
 
-void insertAtPosition(Node* &head, int position, int data ){
-
-    Node* newNode = new Node(data);
-
-    // Position 1
-
-    if(position == 1){
-        newNode->next = head;
-        head = newNode;
-        return;
-    }
-
-
-    Node* temp = head;
-
-    for(int i = 1; i < position-1 && temp != NULL; i++){
-        temp = temp->next;
-    }
-
-    if(temp == NULL){
-        cout<<"Position Out of bound!"<<endl;
-    }
-
-    newNode->next = temp->next;
-    temp->next = newNode;
-
-
-}
-
-
-
-void print(Node* &head){
-
-    if(head == NULL){
-        cout<<"Linked List is Empty!"<<endl;
-        return;
-    }
-
-    Node* temp = head;
-
-    while(temp != NULL){
-        cout<<temp->data<<"->";
-        temp = temp->next;
-    }
-
-
-    cout<<"NULL"<<endl;
-}
-
-
-void updateData(Node* &head, int oldData, int newData){
-
-    if(head == NULL){
-        cout<<"Linked  list is Empty!"<<endl;
-        return;
-    }
-
-    Node* temp = head;
-
-    while(temp->data != oldData){
-        temp = temp->next;
-    }
-
-     temp->data = newData;
-   
   
 }
 
-void deleteData(Node* &head, int pos){
 
-    if(head == NULL){
-        cout<<"Linked  list is Empty!"<<endl;
-        return;
-    }
-
-    Node* temp = head;
-    Node* prev = NULL;
-
-    for(int i=1;i<pos-1;i++)
-    {
-        prev = temp;
-        temp=temp->next;
-       
-    }
-
-    prev->next = temp->next;
-
-    delete temp;
-
-}
-
-
-
-
-
-int main(){
-    Node* head = NULL;
-
-    cout<<"Insert Node at Tail : "<<endl;
-
-    insertAtTail(head,10);
-    insertAtTail(head,20);
-    insertAtTail(head,30);
-    insertAtTail(head,40);
-    insertAtTail(head,50);
-
-    print(head);
-
-
-    cout<<"Insert Node at Head : "<<endl;
-
-    insertAtHead(head,100);
-    insertAtHead(head,200);
-    insertAtHead(head,300);
-    insertAtHead(head,400);
-
-    print(head);
-
-    cout<<"Insert Node at Specific Possition : "<<endl;
-
-    insertAtPosition(head, 3, 1000);
-
-    print(head);
-
-    cout<<"Insert Node at position 1 : "<<endl;
-
-      insertAtPosition(head, 1, 11111);
-
-      print(head);
-
-    //   cout<<"Insert Node at position out of bound : "<<endl;
-
-    //   insertAtPosition(head, 13, 11111000);
-
-    //   print(head);
-    
-    //   cout<<"Update Linked List : "<<endl;
-
-    //   updateData(head,33, 3000);
-
-    //   print(head);
-
-      deleteData(head,3);
-      print(head);
-}
