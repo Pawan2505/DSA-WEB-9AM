@@ -4721,104 +4721,184 @@
 
 
 
-#include<iostream>
-#include<stack>
-using namespace std;
+// #include<iostream>
+// #include<stack>
+// using namespace std;
 
-class Stack{
-    public : 
-    stack<int>s;
-    int capacity;
+// class Stack{
+//     public : 
+//     stack<int>s;
+//     int capacity;
 
-    Stack(int cap){
-        capacity = cap;
-    }
+//     Stack(int cap){
+//         capacity = cap;
+//     }
 
-    void push(int data){
+//     void push(int data){
 
-        if(s.size() >= capacity){
-            cout<<"Stack Overflow!"<<endl;;
-            return;
-        }
+//         if(s.size() >= capacity){
+//             cout<<"Stack Overflow!"<<endl;;
+//             return;
+//         }
 
-        s.push(data);
-        cout<<data<<" pushed in stack!"<<endl;
+//         s.push(data);
+//         cout<<data<<" pushed in stack!"<<endl;
 
-    }
+//     }
 
-    int pop(){
+//     int pop(){
 
-        if(s.size() == 0){
-            cout<<"Stack Underflow!"<<endl;
-            return -1;
-        }
+//         if(s.size() == 0){
+//             cout<<"Stack Underflow!"<<endl;
+//             return -1;
+//         }
 
-        int topElement = s.top();
-        s.pop();
+//         int topElement = s.top();
+//         s.pop();
 
-        cout<<topElement<<" popped from stack!"<<endl;
-    }
+//         cout<<topElement<<" popped from stack!"<<endl;
+//     }
 
-    void display(){
-        if(s.size() == 0){
-            cout<<"Stack is Empty!"<<endl;
-            return;
-        }
+//     void display(){
+//         if(s.size() == 0){
+//             cout<<"Stack is Empty!"<<endl;
+//             return;
+//         }
 
-        while(s.size()>0){
-            cout<<s.top()<<" ";
-            s.pop();
-        }
-        cout<<endl;
-    }
+//         while(s.size()>0){
+//             cout<<s.top()<<" ";
+//             s.pop();
+//         }
+//         cout<<endl;
+//     }
 
-    bool isFull(){
+//     bool isFull(){
 
-        if(s.size() >= capacity){
-            return 1;
-        }else{
-           return 0;
-        }
-    }
+//         if(s.size() >= capacity){
+//             return 1;
+//         }else{
+//            return 0;
+//         }
+//     }
 
-    void empty(){
+//     void empty(){
 
-        if(s.empty()){
-            cout<<"Stack is Empty!"<<endl;
-        }else{
-            cout<<"Stack is not Empty!"<<endl;
-        }
-    }
-};
+//         if(s.empty()){
+//             cout<<"Stack is Empty!"<<endl;
+//         }else{
+//             cout<<"Stack is not Empty!"<<endl;
+//         }
+//     }
+// };
 
-int main(){
+// int main(){
     
-    Stack mystack(5);
+//     Stack mystack(5);
 
-    cout<<"Push element in stack : "<<endl;
+//     cout<<"Push element in stack : "<<endl;
 
-    mystack.push(10);
-    mystack.push(20);
-    mystack.push(30);
-    mystack.push(40);
-    mystack.push(50);
-    // mystack.push(60);
-    // mystack.push(60);
+//     mystack.push(10);
+//     mystack.push(20);
+//     mystack.push(30);
+//     mystack.push(40);
+//     mystack.push(50);
+//     // mystack.push(60);
+//     // mystack.push(60);
 
 
-    cout<<"Remove peek element : "<<endl;
+//     cout<<"Remove peek element : "<<endl;
 
-    // mystack.pop();
+//     // mystack.pop();
     
-  cout<<mystack.isFull()<<endl;
+//   cout<<mystack.isFull()<<endl;
 
-    cout<<"Display stack : "<<endl;
-    mystack.display();
+//     cout<<"Display stack : "<<endl;
+//     mystack.display();
 
-    mystack.empty();
+//     mystack.empty();
 
 
   
-}
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Stack{
+//     public : 
+
+//     int *arr;
+//     int capacity;
+//     int top;
+
+//     Stack(int size){
+//         arr = new int[size];
+//         capacity = size;
+//         top = -1;
+//     }
+
+//     void push(int data){
+//         if(top >= capacity-1){
+//             cout<<"Stack is overflow"<<endl;
+//             return;
+//         }
+
+//         top++;
+
+//         arr[top] = data;
+
+//         cout<<data<<" push in stack!"<<endl;
+//     }
+
+//     int pop(){
+//         if(top == -1){
+//             cout<<"Stack is underflow!"<<endl;
+//             return -1;
+//         }
+
+//         int topelement = arr[top];
+//         top--;
+//         cout<<topelement<<" popped from stack"<<endl;
+        
+//         return arr[top];
+//     }
+
+
+//     void display(){
+
+//         if(top == -1){
+//             cout<<"Stack is Empty!"<<endl;
+//             return;
+//         }
+
+//         for(int i = top; i >=0; i--){
+//             cout<<arr[i]<<" ";
+//         }
+//     }
+// };
+
+
+// int main(){
+
+//     Stack mystack(5);
+
+//     mystack.push(10);
+//     mystack.push(20);
+//     mystack.push(30);
+//     mystack.push(40);
+//     mystack.push(50);
+//     mystack.push(60);
+
+//     mystack.pop();
+
+//     mystack.display();
+
+// }
+
+
+
 
 
