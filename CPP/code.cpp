@@ -4902,85 +4902,137 @@
 
 
 
+// #include<iostream>
+// using namespace std;
+
+// class Node{
+//     public :
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+// void push(Node* &top, int data){
+
+//     Node* newNode = new Node(data);
+
+//     newNode->next = top;
+
+//     top = newNode;
+
+//     cout<<data<<" push in stack!"<<endl;
+    
+// }
+
+
+// int pop(Node* &top){
+//     if(top == NULL){
+//         cout<<"Stack Underflow!"<<endl;
+//         return -1;
+//     }
+
+//     Node* temp = top;
+
+//     top = top->next;
+
+//     cout<<temp->data<<" popped from stack!"<<endl;
+//     delete temp;
+
+// }
+
+
+
+// void display(Node* &top){
+//     if(top == NULL){
+//         cout<<"Stack is Empty!"<<endl;
+//         return;
+//     }
+
+//     Node* temp = top;
+
+//     while(temp != NULL){
+//         cout<<temp->data<<"->";
+//         temp = temp->next;
+//     }
+
+//     cout<<"NULL"<<endl;
+// }
+
+
+// int main(){
+//     Node* top = NULL;
+
+//     push(top,10);
+//     push(top,20);
+//     push(top,30);
+//     push(top,40);
+//     push(top,50);
+
+//     display(top);
+
+//     pop(top);
+
+//      display(top);
+// }
+
+// // https://docs.google.com/document/d/1JIjB1g1gXEh4fmVPpT1M0yppVYw-EI2ELVjHOeUminc/edit?tab=t.0
+
+// // https://docs.google.com/document/d/149HDZfB69TtAxBGSrtVs7p6hTcPrFicHWAnUQgcJSlo/edit?tab=t.0
+
+// // https://docs.google.com/document/d/1SS6vY-xWjQ5xWQ07KUoeVKoD8ICqU5gueJDFho3zgJY/edit?tab=t.0
+
+
+// STL : queue
+
+
 #include<iostream>
+#include<queue>
 using namespace std;
 
-class Node{
-    public :
-    int data;
-    Node* next;
-
-    Node(int data){
-        this->data = data;
-        this->next = NULL;
-    }
-};
-
-void push(Node* &top, int data){
-
-    Node* newNode = new Node(data);
-
-    newNode->next = top;
-
-    top = newNode;
-
-    cout<<data<<" push in stack!"<<endl;
-    
-}
-
-
-int pop(Node* &top){
-    if(top == NULL){
-        cout<<"Stack Underflow!"<<endl;
-        return -1;
-    }
-
-    Node* temp = top;
-
-    top = top->next;
-
-    cout<<temp->data<<" popped from stack!"<<endl;
-    delete temp;
-
-}
-
-
-
-void display(Node* &top){
-    if(top == NULL){
-        cout<<"Stack is Empty!"<<endl;
-        return;
-    }
-
-    Node* temp = top;
-
-    while(temp != NULL){
-        cout<<temp->data<<"->";
-        temp = temp->next;
-    }
-
-    cout<<"NULL"<<endl;
-}
-
-
 int main(){
-    Node* top = NULL;
 
-    push(top,10);
-    push(top,20);
-    push(top,30);
-    push(top,40);
-    push(top,50);
+    queue<int>q1;
 
-    display(top);
+    //  push()
+cout<<"Queue is empty : "<<q1.empty()<<endl;
 
-    pop(top);
+    q1.push(10);
+    q1.push(20);
+    q1.push(30);
+    q1.push(40);
+    q1.push(50);
 
-     display(top);
+    // front()
+
+    cout<<"Front element in queue : "<<q1.front()<<endl;
+
+    // back()
+
+    cout<<"Last element in queue : "<<q1.back()<<endl;
+
+    // size()
+
+    cout<<"Size of queue : "<<q1.size()<<endl;
+
+    q1.pop();
+
+    
+    cout<<"Front element in queue : "<<q1.front()<<endl;
+
+    cout<<"Size of queue : "<<q1.size()<<endl;
+
+    cout<<"Queue is empty : "<<q1.empty()<<endl;
+
+    cout<<"Display queue : "<<endl;
+
+    while(q1.size()>0){
+        cout<<q1.front()<<" ";
+        q1.pop();
+    }
+
+      cout<<"\nQueue is empty : "<<q1.empty()<<endl;
 }
-
-// https://docs.google.com/document/d/1JIjB1g1gXEh4fmVPpT1M0yppVYw-EI2ELVjHOeUminc/edit?tab=t.0
-
-// https://docs.google.com/document/d/149HDZfB69TtAxBGSrtVs7p6hTcPrFicHWAnUQgcJSlo/edit?tab=t.0
-
-// https://docs.google.com/document/d/1SS6vY-xWjQ5xWQ07KUoeVKoD8ICqU5gueJDFho3zgJY/edit?tab=t.0
