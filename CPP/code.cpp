@@ -5127,86 +5127,192 @@
 //     q1.push(70);
 // }
 
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Queue{
+//     public :
+//     int *arr;
+//     int front;
+//     int back;
+//     int capacity;
+
+//     Queue(int size){
+//         arr = new int[size];
+//         front = -1;
+//         back = -1;
+//         capacity = size;
+//     }
+
+//     void push(int data){
+//         if(back >= capacity -1){
+            
+//             if(front>0){
+//                 for(int i = front; i <=back; i++){
+//                     arr[i-front] = arr[i];
+//                 }
+//                 // back = back - front;
+//                 back = front;
+//                 front = 0;
+//             }else{
+//             cout<<"Queue overflow!"<<endl;
+//             return;
+//             }
+//         }
+
+//         back++;
+
+//         arr[back] = data;
+
+//         cout<<data<<" push in queue!"<<endl;
+
+//         if(front == -1){
+//             front++;
+//         }
+//     }
+
+//     int pop(){
+//         if(front == -1 || front > back){
+
+//             cout<<"Queue Underflow!"<<endl;
+//             return -1;
+//         }
+
+//         int frontItem = arr[front];
+
+//         front++;
+
+//         cout<<frontItem<<" popped from Queue!"<<endl;
+
+//         if(front > back){
+//             front = -1;
+//             back = -1;
+//         }
+
+//      return frontItem;
+//     }
+
+//     void display(){
+//         if(front == -1 || front > back){
+//             cout<<"Queue Empty!"<<endl;
+//             return;
+//         }
+
+//         for(int i = front; i <= back; i++){
+//             cout<<arr[i]<<" ";
+//         }
+
+//         cout<<endl;
+//     }
+// };
+
+// int main(){
+//     Queue q1(5);
+
+//     q1.push(10);
+//     q1.push(20);
+//     q1.push(30);
+//     q1.push(40);
+//     q1.push(50);
+//     q1.push(60);
+
+//     q1.pop();
+//     q1.pop();
+
+//     q1.display();
+//     q1.push(70);
+//     q1.push(90);
+//     q1.push(1000);
+
+//      q1.display();
+
+// }
+
+
+
 #include<iostream>
 using namespace std;
 
-class Queue{
+class Node{
     public :
-    int *arr;
-    int front;
-    int back;
-    int capacity;
+    int data;
+    Node* next;
 
-    Queue(int size){
-        arr = new int[size];
-        front = -1;
-        back = -1;
-        capacity = size;
+    Node(int data){
+        this->data = data;
+        this->next = NULL;
+    }
+};
+
+
+class Queue{
+    private :
+    Node* front;
+    Node* back;
+
+    public :
+    Queue(){
+        front = NULL;
+        back = NULL;
     }
 
     void push(int data){
-        if(back >= capacity -1){
-            
-            if(front>0){
-                for(int i = front; i <=back; i++){
-                    arr[i-front] = arr[i];
-                }
-                back = back - front;
-                front = 0;
-            }else{
-            cout<<"Queue overflow!"<<endl;
+        Node* newNode = new Node(data);
+
+        if(back == NULL){
+            front = newNode;
+            back = newNode;
             return;
-            }
         }
 
-        back++;
-
-        arr[back] = data;
-
-        cout<<data<<" push in queue!"<<endl;
-
-        if(front == -1){
-            front++;
-        }
+        back->next = newNode;
+        back = newNode;
     }
 
     int pop(){
-        if(front == -1 || front > back){
-
+        if(back == NULL){
             cout<<"Queue Underflow!"<<endl;
             return -1;
         }
 
-        int frontItem = arr[front];
+        Node* temp = front;
 
-        front++;
+        front = front->next;
 
-        cout<<frontItem<<" popped from Queue!"<<endl;
+        delete temp;
+    }
 
-        if(front > back){
-            front = -1;
-            back = -1;
+    int peek(){
+        if(back == NULL){
+            cout<<"Queue Empty"<<endl;
+            return -1;
         }
 
-     return frontItem;
+        return front->data;
     }
 
     void display(){
-        if(front == -1 || front > back){
+        if(back == NULL){
             cout<<"Queue Empty!"<<endl;
             return;
         }
 
-        for(int i = front; i <= back; i++){
-            cout<<arr[i]<<" ";
+        Node* temp = front;
+
+        while(temp != NULL){
+            cout<<temp->data<<"->";
+            temp = temp->next;
         }
 
-        cout<<endl;
+        cout<<"NULL"<<endl;
     }
 };
 
 int main(){
-    Queue q1(5);
+
+    Queue q1;
 
     q1.push(10);
     q1.push(20);
@@ -5215,14 +5321,16 @@ int main(){
     q1.push(50);
     q1.push(60);
 
-    q1.pop();
+
+    q1.display();
+
     q1.pop();
 
     q1.display();
-    q1.push(70);
-    q1.push(90);
-    q1.push(1000);
 
-     q1.display();
+    q1.push(100);
 
+    q1.display();
+
+    cout<<"Peek element in queue : "<<q1.peek()<<endl;
 }
