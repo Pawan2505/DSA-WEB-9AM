@@ -5232,105 +5232,198 @@
 
 
 
+// #include<iostream>
+// using namespace std;
+
+// class Node{
+//     public :
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+
+// class Queue{
+//     private :
+//     Node* front;
+//     Node* back;
+
+//     public :
+//     Queue(){
+//         front = NULL;
+//         back = NULL;
+//     }
+
+//     void push(int data){
+//         Node* newNode = new Node(data);
+
+//         if(back == NULL){
+//             front = newNode;
+//             back = newNode;
+//             return;
+//         }
+
+//         back->next = newNode;
+//         back = newNode;
+//     }
+
+//     int pop(){
+//         if(back == NULL){
+//             cout<<"Queue Underflow!"<<endl;
+//             return -1;
+//         }
+
+//         Node* temp = front;
+
+//         front = front->next;
+
+//         delete temp;
+//     }
+
+//     int peek(){
+//         if(back == NULL){
+//             cout<<"Queue Empty"<<endl;
+//             return -1;
+//         }
+
+//         return front->data;
+//     }
+
+//     void display(){
+//         if(back == NULL){
+//             cout<<"Queue Empty!"<<endl;
+//             return;
+//         }
+
+//         Node* temp = front;
+
+//         while(temp != NULL){
+//             cout<<temp->data<<"->";
+//             temp = temp->next;
+//         }
+
+//         cout<<"NULL"<<endl;
+//     }
+// };
+
+// int main(){
+
+//     Queue q1;
+
+//     q1.push(10);
+//     q1.push(20);
+//     q1.push(30);
+//     q1.push(40);
+//     q1.push(50);
+//     q1.push(60);
+
+
+//     q1.display();
+
+//     q1.pop();
+
+//     q1.display();
+
+//     q1.push(100);
+
+//     q1.display();
+
+//     cout<<"Peek element in queue : "<<q1.peek()<<endl;
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     int a = 10;  //1
+//     int b = 20;  // 1
+
+//     swap(a,b);  //1   => O(1)
+
+//     cout<<a<<endl;
+//     cout<<b<<endl;
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     int a = 10;  //1
+//     int b = 20;  // 1
+// int temp = a;  //1
+//  a = b;
+//  b = temp;
+
+//     cout<<a<<endl;
+//     cout<<b<<endl;
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//   int arr[5] = {12,34,56,78};  //1
+
+//     cout<<arr[4]<<endl;  // O(1)
+
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//   int arr[5] = {12,34,56,78};  //1
+
+//     cout<<arr[4]<<endl;  // O(1)
+    
+//     arr[4] = 122;  // 1
+
+// }
+
+
 #include<iostream>
 using namespace std;
 
-class Node{
-    public :
-    int data;
-    Node* next;
+int linearSearch(int arr[], int n, int key){
 
-    Node(int data){
-        this->data = data;
-        this->next = NULL;
-    }
-};
+    for(int i = 0; i < n; i++){
 
+        if(arr[i] == key){
 
-class Queue{
-    private :
-    Node* front;
-    Node* back;
-
-    public :
-    Queue(){
-        front = NULL;
-        back = NULL;
-    }
-
-    void push(int data){
-        Node* newNode = new Node(data);
-
-        if(back == NULL){
-            front = newNode;
-            back = newNode;
-            return;
+            int index = i;
+            return index;
         }
-
-        back->next = newNode;
-        back = newNode;
     }
 
-    int pop(){
-        if(back == NULL){
-            cout<<"Queue Underflow!"<<endl;
-            return -1;
-        }
+    return -1;
 
-        Node* temp = front;
-
-        front = front->next;
-
-        delete temp;
-    }
-
-    int peek(){
-        if(back == NULL){
-            cout<<"Queue Empty"<<endl;
-            return -1;
-        }
-
-        return front->data;
-    }
-
-    void display(){
-        if(back == NULL){
-            cout<<"Queue Empty!"<<endl;
-            return;
-        }
-
-        Node* temp = front;
-
-        while(temp != NULL){
-            cout<<temp->data<<"->";
-            temp = temp->next;
-        }
-
-        cout<<"NULL"<<endl;
-    }
-};
+}
 
 int main(){
 
-    Queue q1;
+    int n = 10;
 
-    q1.push(10);
-    q1.push(20);
-    q1.push(30);
-    q1.push(40);
-    q1.push(50);
-    q1.push(60);
+    int arr[n] = {10,20,30,40,50,60,70,80,90,100};
 
+    int key = 60;
 
-    q1.display();
+    int result =  linearSearch(arr,n, key);
 
-    q1.pop();
+    if(result != -1){
+        cout<<"Element is present at index : "<<result<<endl;
+    }else{
+        cout<<"Element not present in array !"<<endl;
+    }
 
-    q1.display();
-
-    q1.push(100);
-
-    q1.display();
-
-    cout<<"Peek element in queue : "<<q1.peek()<<endl;
 }
