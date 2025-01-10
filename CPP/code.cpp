@@ -5479,31 +5479,69 @@
 
 // Sorting
 
-#include<iostream>
-using namespace std;
 
-int bubbleSort(int arr[], int n){
 
-    for(int i = 0; i < n-1; i++){
+// #include<iostream>
+// using namespace std;
 
-        for(int j = 0; j < n-i-1; j++){
-            if(arr[j] > arr[j+1]){
-                swap(arr[j], arr[j+1]);
-            }
-        }
+// int bubbleSort(int arr[], int n){
 
-    }
+//     for(int i = 0; i < n-1; i++){
 
-}
+//         for(int j = 0; j < n-i-1; j++){
+//             if(arr[j] > arr[j+1]){
+//                 swap(arr[j], arr[j+1]);
+//             }
+//         }
 
-int main(){
+//     }
 
-    int n = 7;
-    int arr[n] = {18,7,99,77,22,9,10};
+// }
 
-    bubbleSort(arr,n);
+// int main(){
 
-    for(int i = 0; i < n; i++){
-        cout<<arr[i]<<" ";
-    }
-}
+//     int n = 7;
+//     int arr[n] = {18,7,99,77,22,9,10};
+
+//     bubbleSort(arr,n);
+
+//     for(int i = 0; i < n; i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int insertionSort(int arr[], int n){
+
+//     for(int i = 0; i < n; i++){
+//         int current = arr[i];
+//         int previous = i-1;
+
+//         while(previous >= 0 && arr[previous] > current){
+//             arr[previous + 1] = arr[previous];
+//             previous--;
+//         }
+
+//         arr[previous+1] = current;
+//     }
+
+// }
+
+// int main(){
+
+//     int n = 7;
+
+//     int arr[n] = {40,60,20,63,75,15,3};
+
+
+//     insertionSort(arr,n);
+    
+//     for(int i = 0; i < n; i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
