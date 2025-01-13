@@ -5545,3 +5545,39 @@
 //         cout<<arr[i]<<" ";
 //     }
 // }
+
+
+// Selection Sort
+
+#include<iostream>
+using namespace std;
+
+int selectionSort(int arr[], int n){
+
+    for(int i = 0; i < n-1; i++){
+
+        int si = i;
+
+        for(int j = i+1; j<n; j++){
+            if(arr[j] < arr[si]){
+                si = j;
+            }
+        }
+
+        swap(arr[i], arr[si]);
+    }
+
+}
+int main(){
+    int n = 6;
+
+    int arr[n] = {85,55,38,48,7,18};
+
+    selectionSort(arr,n);
+
+    for(int i = 0; i < n; i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+
+}
