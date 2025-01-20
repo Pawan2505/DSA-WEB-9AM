@@ -5583,80 +5583,150 @@
 // }
 
 
+// #include<iostream>
+// using namespace std;
+
+
+// void merge(int arr[], int start, int end){
+//     int mid = start + (end-start)/2;
+
+//     int length1 = mid - start+1;
+
+//     int length2 = end - mid;
+
+//     int *leftArray = new int[length1];
+//     int *rightArray = new int[length2];
+
+//     int originalArrayIndex = start;
+
+//     for(int i = 0; i < length1;i++){
+//        leftArray[i] = arr[originalArrayIndex++];
+//     }
+
+//     originalArrayIndex = mid+1;
+
+//     for(int i = 0; i < length2; i++){
+//         rightArray[i] = arr[originalArrayIndex++];
+//     }
+
+//     int index1 = 0;
+//     int index2 = 0;
+
+//     originalArrayIndex = start;
+
+//     while(index1 < length1 && index2 < length2){
+
+//         if(leftArray[index1] < rightArray[index2]){
+//             arr[originalArrayIndex++] = leftArray[index1++];
+//         }else{
+//             arr[originalArrayIndex++] = rightArray[index2++];
+//         }
+//     }
+
+//     while(index1 < length1){
+//         arr[originalArrayIndex++] = leftArray[index1++];
+//     }
+
+//     while(index2 < length2){
+//         arr[originalArrayIndex++] = rightArray[index2++];
+//     }
+
+//     delete []leftArray;
+//     delete []rightArray;
+
+// }
+
+// void mergeSort(int arr[], int start, int end){
+//     if(start >= end){
+//         return;
+//     }
+
+//     int mid = start + (end-start)/2;
+
+//     mergeSort(arr, start, mid);
+//     mergeSort(arr, mid+1, end);
+//     merge(arr, start, end);
+// }
+
+// int main(){
+//     int n = 11;
+
+//     int arr[n] = {12,34,567,56,2,8,2,56,7,45,89};
+
+//     mergeSort(arr,0,n-1);
+
+//     for(int i = 0; i < n; i++){
+//         cout<<arr[i]<<" ";
+//     }
+//     cout<<endl;
+// }
+
+
+// quick sort
+
 #include<iostream>
 using namespace std;
 
+int partition(int arr[], int start, int end){
+    int pivot = arr[start];
 
-void merge(int arr[], int start, int end){
-    int mid = start + (end-start)/2;
+    int count = 0;
 
-    int length1 = mid - start+1;
-
-    int length2 = end - mid;
-
-    int *leftArray = new int[length1];
-    int *rightArray = new int[length2];
-
-    int originalArrayIndex = start;
-
-    for(int i = 0; i < length1;i++){
-       leftArray[i] = arr[originalArrayIndex++];
-    }
-
-    originalArrayIndex = mid+1;
-
-    for(int i = 0; i < length2; i++){
-        rightArray[i] = arr[originalArrayIndex++];
-    }
-
-    int index1 = 0;
-    int index2 = 0;
-
-    originalArrayIndex = start;
-
-    while(index1 < length1 && index2 < length2){
-
-        if(leftArray[index1] < rightArray[index2]){
-            arr[originalArrayIndex++] = leftArray[index1++];
-        }else{
-            arr[originalArrayIndex++] = rightArray[index2++];
+    for(int i = start+1; i <= end; i++){
+        if(arr[i] <= pivot){
+            count++;
         }
     }
 
-    while(index1 < length1){
-        arr[originalArrayIndex++] = leftArray[index1++];
+    int pi = start + count;
+
+    swap(arr[start],arr[pi]);
+
+    int i = start;
+
+    int j = end;
+
+    while(i < pi && j > pi){
+        while(arr[i] <= pivot){
+            i++;
+        }
+
+        while(arr[j] > pivot){
+            j--;
+        }
+
+        if(i < pi && j > pi){
+            swap(arr[i], arr[j]);
+        }
     }
 
-    while(index2 < length2){
-        arr[originalArrayIndex++] = rightArray[index2++];
-    }
-
-    delete []leftArray;
-    delete []rightArray;
-
+    return pi;
 }
 
-void mergeSort(int arr[], int start, int end){
+
+void quickSort(int arr[], int start, int end){
     if(start >= end){
         return;
     }
 
-    int mid = start + (end-start)/2;
+    int pi = partition(arr, start,end);
 
-    mergeSort(arr, start, mid);
-    mergeSort(arr, mid+1, end);
-    merge(arr, start, end);
+    quickSort(arr,start, pi-1);
+    quickSort(arr, pi+1, end);
 }
 
 int main(){
-    int n = 11;
+    int n = 7;
 
-    int arr[n] = {12,34,567,56,2,8,2,56,7,45,89};
+    int arr[7] = {15,6,35,23,50,17,80};
 
-    mergeSort(arr,0,n-1);
+    quickSort(arr, 0, n-1);
+
+    cout<<"Sorted Array : "<<endl;
 
     for(int i = 0; i < n; i++){
         cout<<arr[i]<<" ";
     }
-    cout<<endl;
+
+
 }
